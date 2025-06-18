@@ -187,7 +187,7 @@ a{
 /* hero section start */
 
 .bg-image-section {
-    background-image: url('https://wallpapercat.com/w/full/c/6/2/614311-2048x1152-desktop-hd-bangladesh-background-photo.jpg'); /* Replace with your image */
+    background-image: url('https://wallpapercat.com/w/full/c/6/2/614311-2048x1152-desktop-hd-bangladesh-background-photo.jpg'); 
     background-size: cover;
     background-position: center;
     height: 70vh;
@@ -284,7 +284,6 @@ a{
 
 .custom-green-bg {
   background: #14a800;
-  /* Example green, adjust as needed */
   color: #fff;
 }
 .btn-green {
@@ -379,7 +378,6 @@ a{
   /* Inherit from .find-best-home-text for now */
   color: #fff;
   background: #222; /* or keep custom-green-bg if you want */
-
   padding: 2rem 2.5rem;
 }
 .modern-split-section {
