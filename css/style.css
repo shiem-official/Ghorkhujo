@@ -432,3 +432,26 @@ a{
     text-align: center;
   }
 }
+
+/* find-learn-icon */
+.find-learn-icon i{
+  color: #14a800;
+}
+
+@media (max-width:578px) {
+.find-learn-text{
+  text-align: center;
+  font-size: 2.4rem;
+}
+.find-learn-img{
+  margin-bottom: 0px !important;
+}
+.find-learn-section{
+  padding: 0px !important;
+}
+.find-learn-btn{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+}
