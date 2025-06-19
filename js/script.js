@@ -33,7 +33,7 @@ const swiper = new Swiper('.mySwiper', {
     },
     loopedSlides: 20, // helps smoother loop with multiple duplicates
 
-    // 🔥 Responsive breakpoints
+    // Responsive breakpoints
     breakpoints: {
       0: {
         slidesPerView: 3,
