@@ -25,31 +25,33 @@ const swiper = new Swiper('.mySwiper', {
     slidesPerView: '5',
     spaceBetween: 40,
     loop: true,
-    allowTouchMove: false,
     speed: 6000, // very slow transition for continuous smooth movement
     autoplay: {
       delay: 0, // no delay between transitions
       disableOnInteraction: false,
     },
     loopedSlides: 20, // helps smoother loop with multiple duplicates
-
     // Responsive breakpoints
     breakpoints: {
       0: {
         slidesPerView: 3,
         spaceBetween: 20,
+        allowTouchMove: true,
       },
       576: {
         slidesPerView: 4,
         spaceBetween: 30,
+        allowTouchMove: true,
       },
       768: {
         slidesPerView: 4,
         spaceBetween: 30,
+        allowTouchMove: true,
       },
       992: {
         slidesPerView: 5,
         spaceBetween: 40,
+        allowTouchMove: false,
       }
     }
   });

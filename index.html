@@ -1,186 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GhorKhojo</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<!-- navbar start -->
-<nav class="navbar navbar-expand-lg position-relative">
-    <div class="container custom-container">
-      
-      <!-- Left: Logo -->
-      <a class="navbar-brand" href="#">
-        <img src="images/ghorkhujo2.png" alt="Logo" width="186" height="68">
-      </a>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg position-relative">
+      <div class="container custom-container">
+        <!-- Left: Logo -->
+        <a class="navbar-brand" href="#">
+          <img src="images/ghorkhujo2.png" alt="Logo" width="186" height="68" />
+        </a>
 
-      <!-- Toggle Button -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <!-- Toggle Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <!-- Navigation Items -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <!-- Center: Menu items -->
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item px-2">
-            <a class="nav-link" href="#">Find Home</a>
-          </li>
-          <li class="nav-item px-2">
-            <a class="nav-link" href="#">Post Rental</a>
-          </li>
-          <li class="nav-item px-2">
-            <a class="nav-link" href="#">About Us</a>
-          </li>
-          <li class="nav-item px-2">
-            <a class="nav-link" href="#">Contact Us</a>
-          </li>
-        </ul>
+        <!-- Navigation Items -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- Center: Menu items -->
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#">Find Home</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#">Post Rental</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+          </ul>
 
-        <!-- Right: Auth buttons -->
-        <div class="d-flex ms-auto">
-          <button class="btn nav_btn_1 me-2" type="button">Log in</button>
-          <button class="btn nav_btn_2" type="button">Sign Up</button>
+          <!-- Right: Auth buttons -->
+          <div class="d-flex ms-auto">
+            <button class="btn nav_btn_1 me-2" type="button">Log in</button>
+            <button class="btn nav_btn_2" type="button">Sign Up</button>
+          </div>
         </div>
       </div>
-    </div>
-</nav>
+    </nav>
 
-<!-- hero section start -->
-<section class="rounded bg-image-section d-flex align-items-center justify-content-center text-white">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-12 form-container">
-        <form class="row g-3 align-items-center">
-          <!-- House Type -->
-          <div class="col-md-2">
-            <select class="form-select" aria-label="House Type">
-              <option selected disabled>House Type</option>
-              <option value="apartment">Apartment</option>
-              <option value="villa">Villa</option>
-              <option value="duplex">Duplex</option>
-            </select>
+    <!-- hero section start -->
+    <section
+      class="rounded bg-image-section d-flex align-items-center justify-content-center text-white"
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12 form-container">
+            <form class="row g-3 align-items-center">
+              <!-- House Type -->
+              <div class="col-md-2">
+                <select class="form-select" aria-label="House Type">
+                  <option selected disabled>House Type</option>
+                  <option value="apartment">Apartment</option>
+                  <option value="villa">Villa</option>
+                  <option value="duplex">Duplex</option>
+                </select>
+              </div>
+              <!-- Division -->
+              <div class="col-4 col-md-2">
+                <select class="form-select" aria-label="Division">
+                  <option selected disabled>Division</option>
+                  <option value="dhaka">Dhaka</option>
+                  <option value="chattogram">Chattogram</option>
+                  <option value="khulna">Khulna</option>
+                </select>
+              </div>
+              <!-- City -->
+              <div class="col-4 col-md-2">
+                <select class="form-select" aria-label="City">
+                  <option selected disabled>District</option>
+                  <option value="uttara">Uttara</option>
+                  <option value="mirpur">Mirpur</option>
+                  <option value="banani">Banani</option>
+                </select>
+              </div>
+              <!-- Upazila -->
+              <div class="col-4 col-md-2">
+                <select class="form-select" aria-label="Upazila">
+                  <option selected disabled>Upazila</option>
+                  <option value="savar">Savar</option>
+                  <option value="keraniganj">Keraniganj</option>
+                  <option value="demra">Demra</option>
+                </select>
+              </div>
+              <!-- Search Button -->
+              <div class="col-md-4 d-grid">
+                <button type="submit" class="btn btn-lg">Search</button>
+              </div>
+            </form>
           </div>
-          <!-- Division -->
-          <div class="col-4 col-md-2">
-            <select class="form-select" aria-label="Division">
-              <option selected disabled>Division</option>
-              <option value="dhaka">Dhaka</option>
-              <option value="chattogram">Chattogram</option>
-              <option value="khulna">Khulna</option>
-            </select>
-          </div>
-          <!-- City -->
-          <div class="col-4 col-md-2">
-            <select class="form-select" aria-label="City">
-              <option selected disabled>District</option>
-              <option value="uttara">Uttara</option>
-              <option value="mirpur">Mirpur</option>
-              <option value="banani">Banani</option>
-            </select>
-          </div>
-          <!-- Upazila -->
-          <div class="col-4 col-md-2">
-            <select class="form-select" aria-label="Upazila">
-              <option selected disabled>Upazila</option>
-              <option value="savar">Savar</option>
-              <option value="keraniganj">Keraniganj</option>
-              <option value="demra">Demra</option>
-            </select>
-          </div>
-          <!-- Search Button -->
-          <div class=" col-md-4 d-grid">
-            <button type="submit" class="btn  btn-lg">Search</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!--  Start Policy Scroller Section -->
-<section class="py-4 bg-light overflow-hidden">
-  <div class="container px-0">
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper text-center align-items-center">
-        <!-- Original Policy Items -->
-        <div class="swiper-slide">
-          <img src="images/support.png" width="60" alt="Support">
-          <p class="mt-2 mb-0">24/7 Support</p>
-        </div>
-        <div class="swiper-slide">
-          <img src="images/verified.png" width="60" alt="Fast">
-          <p class="mt-2 mb-0">Verified Houses</p>
-        </div>
-        <div class="swiper-slide">
-          <img src="images/trust.png" width="60" alt="Trust">
-          <p class="mt-2 mb-0">Trusted Service</p>
-        </div>
-        <div class="swiper-slide">
-          <img src="images/secure.png" width="60" alt="Secure">
-          <p class="mt-2 mb-0">Secure Payment</p>
-        </div>
-        <div class="swiper-slide">
-          <img src="images/service.png" width="60" alt="Warranty">
-          <p class="mt-2 mb-0">Service Included</p>
-        </div>
-
-        <!-- Duplicate to prevent white gap -->
-        <div class="swiper-slide">
-          <img src="images/support.png" width="60" alt="Support">
-          <p class="mt-2 mb-0">24/7 Support</p>
-        </div>
-        <div class="swiper-slide">
-          <img src="images/verified.png" width="60" alt="Fast">
-          <p class="mt-2 mb-0">Verified Houses</p>
-        </div>
-        <div class="swiper-slide">
-          <img src="images/trust.png" width="60" alt="Trust">
-          <p class="mt-2 mb-0">Trusted Service</p>
-        </div>
-        <div class="swiper-slide">
-          <img src="images/secure.png" width="60" alt="Secure">
-          <p class="mt-2 mb-0">Secure Payment</p>
-        </div>
-        <div class="swiper-slide">
-          <img src="images/service.png" width="60" alt="Warranty">
-          <p class="mt-2 mb-0">Service Included</p>
-        </div>
-
-        <div class="swiper-slide">
-          <img src="images/support.png" width="60" alt="Support">
-          <p class="mt-2 mb-0">24/7 Support</p>
-        </div>
-        <div class="swiper-slide">
-          <img src="images/verified.png" width="60" alt="Fast">
-          <p class="mt-2 mb-0">Verified Houses</p>
-        </div>
-        <div class="swiper-slide">
-          <img src="images/trust.png" width="60" alt="Trust">
-          <p class="mt-2 mb-0">Trusted Service</p>
-        </div>
-        <div class="swiper-slide">
-          <img src="images/secure.png" width="60" alt="Secure">
-          <p class="mt-2 mb-0">Secure Payment</p>
-        </div>
-        <div class="swiper-slide">
-          <img src="images/service.png" width="60" alt="Warranty">
-          <p class="mt-2 mb-0">Service Included</p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- find and learn -->
-<!-- <section class="find-learn">
+    <!--  Start Policy Scroller Section -->
+    <section class="py-4 bg-light overflow-hidden">
+      <div class="container px-0">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper text-center align-items-center">
+            <!-- Original Policy Items -->
+            <div class="swiper-slide">
+              <img src="images/support.png" width="60" alt="Support" />
+              <p class="mt-2 mb-0">24/7 Support</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/verified.png" width="60" alt="Fast" />
+              <p class="mt-2 mb-0">Verified Houses</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/trust.png" width="60" alt="Trust" />
+              <p class="mt-2 mb-0">Trusted Service</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/secure.png" width="60" alt="Secure" />
+              <p class="mt-2 mb-0">Secure Payment</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/service.png" width="60" alt="Warranty" />
+              <p class="mt-2 mb-0">Service Included</p>
+            </div>
+
+            <!-- Duplicate to prevent white gap -->
+            <div class="swiper-slide">
+              <img src="images/support.png" width="60" alt="Support" />
+              <p class="mt-2 mb-0">24/7 Support</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/verified.png" width="60" alt="Fast" />
+              <p class="mt-2 mb-0">Verified Houses</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/trust.png" width="60" alt="Trust" />
+              <p class="mt-2 mb-0">Trusted Service</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/secure.png" width="60" alt="Secure" />
+              <p class="mt-2 mb-0">Secure Payment</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/service.png" width="60" alt="Warranty" />
+              <p class="mt-2 mb-0">Service Included</p>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="images/support.png" width="60" alt="Support" />
+              <p class="mt-2 mb-0">24/7 Support</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/verified.png" width="60" alt="Fast" />
+              <p class="mt-2 mb-0">Verified Houses</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/trust.png" width="60" alt="Trust" />
+              <p class="mt-2 mb-0">Trusted Service</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/secure.png" width="60" alt="Secure" />
+              <p class="mt-2 mb-0">Secure Payment</p>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/service.png" width="60" alt="Warranty" />
+              <p class="mt-2 mb-0">Service Included</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- find and learn -->
+    <!-- <section class="find-learn">
   <div class="container">
     <div class="row">
       <div class="col-md-6 find-learn-left">
@@ -226,14 +247,47 @@
 
  </section> -->
 
- <section class="py-5 bg-white find-learn-section">
-  <div class="container">
-    <div class="row align-items-center flex-column flex-lg-row">
-      <!--  Left Card -->
-      <div class="col-lg-6 mb-4 mb-lg-0 find-learn-img">
-        <div class="bg-light rounded-4  text-center shadow-sm">
-          <img src="images/rent.png" class="img-fluid" alt="Job Post Example" style="max-height: 400px; width: 100%; object-fit: cover;">
-          <!-- <h5>iOS developer to join our team</h5>
+    <!-- stat section -->
+    <section class="statistics-section bg-light">
+      <div class="container py-5">
+        <div class="row text-center">
+          <div class="col-md-3 col-6 mb-4">
+            <div class="stat-icon"><i class="fas fa-list"></i></div>
+            <div class="stat-number" data-target="2675">0</div>
+            <div class="stat-text">Active Listing</div>
+          </div>
+          <div class="col-md-3 col-6 mb-4">
+            <div class="stat-icon"><i class="fas fa-city"></i></div>
+            <div class="stat-number" data-target="25">0</div>
+            <div class="stat-text">Cities Covered</div>
+          </div>
+          <div class="col-md-3 col-6 mb-4">
+            <div class="stat-icon"><i class="fas fa-home"></i></div>
+            <div class="stat-number" data-target="3340">0</div>
+            <div class="stat-text">Properties Listed</div>
+          </div>
+          <div class="col-md-3 col-6 mb-4">
+            <div class="stat-icon"><i class="fas fa-users"></i></div>
+            <div class="stat-number" data-target="5000">0</div>
+            <div class="stat-text">People using Us</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-white find-learn-section">
+      <div class="container">
+        <div class="row align-items-center flex-column flex-lg-row">
+          <!--  Left Card -->
+          <div class="col-lg-6 mb-4 mb-lg-0 find-learn-img">
+            <div class="bg-light rounded-4 text-center shadow-sm">
+              <img
+                src="images/rent.png"
+                class="img-fluid"
+                alt="Job Post Example"
+                style="max-height: 400px; width: 100%; object-fit: cover"
+              />
+              <!-- <h5>iOS developer to join our team</h5>
           <div class="d-flex justify-content-center gap-3 text-muted small my-2">
             <div><i class="bi bi-clock"></i> Less than 20 hrs/week</div>
             <div><i class="bi bi-calendar-event"></i> Less than 1 month</div>
@@ -244,238 +298,407 @@
             <span class="badge bg-secondary">MySQL</span>
           </div>
           <button class="btn btn-success">Post job</button> -->
-        </div>
-      </div>
+            </div>
+          </div>
 
-      <!--  Right Content -->
-      <div class="col-lg-6">
-        <h1 class="fw-bold mb-4 find-learn-text">Find Your House Now, It's Easy</h1>
+          <!--  Right Content -->
+          <div class="col-lg-6">
+            <h1 class="fw-bold mb-4 find-learn-text">
+              Find Your House Now, It's Easy
+            </h1>
 
-        <div class="mb-3 find-learn-icon d-flex align-items-start gap-3">
-          <i class="bi bi-pencil-square fs-4 text-success"></i>
-          <div>
-            <h6 class="mb-1 fw-semibold">No cost to join</h6>
-            <p class="mb-0 text-muted">Register and browse houses, explore houses, or even book a consultation.</p>
+            <div class="mb-3 find-learn-icon d-flex align-items-start gap-3">
+              <i class="bi bi-pencil-square fs-4 text-success"></i>
+              <div>
+                <h6 class="mb-1 fw-semibold">No cost to join</h6>
+                <p class="mb-0 text-muted">
+                  Register and browse houses, explore houses, or even book a
+                  consultation.
+                </p>
+              </div>
+            </div>
+
+            <div class="mb-3 find-learn-icon d-flex align-items-start gap-3">
+              <i class="bi bi-briefcase fs-4 text-success"></i>
+              <div>
+                <h6 class="mb-1 fw-semibold">
+                  Post a house and find the right tenant.
+                </h6>
+                <p class="mb-0 text-muted">
+                  Post a house and find the right tenant. We will help you to
+                  find the right tenant for your house.
+                </p>
+              </div>
+            </div>
+
+            <div class="mb-4 find-learn-icon d-flex align-items-start gap-3">
+              <i class="bi bi-shield-check fs-4 text-success"></i>
+              <div>
+                <h6 class="mb-1 fw-semibold">
+                  Find the best house in Bangladesh
+                </h6>
+                <p class="mb-0 text-muted">
+                  We have a wide range of houses to choose from, and we are sure
+                  you will find the perfect one for you.
+                </p>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3 flex-wrap find-learn-btn">
+              <a
+                href="#"
+                class="btn"
+                style="background-color: #14a800; color: white"
+                >Sign up for free</a
+              >
+              <a
+                href="#"
+                class="btn"
+                style="color: #14a800; border: 1px solid #14a800"
+                >Learn how to post</a
+              >
+            </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="mb-3 find-learn-icon d-flex align-items-start gap-3">
-          <i class="bi bi-briefcase fs-4 text-success"></i>
-          <div>
-            <h6 class="mb-1 fw-semibold">Post a house and find the right tenant.</h6>
-            <p class="mb-0 text-muted">Post a house and find the right tenant. We will help you to find the right tenant for your house.</p>
+    <!-- post rental section -->
+    <section class="post-rental-section modern-split-section">
+      <div class="container">
+        <div class="row align-items-stretch">
+          <div
+            class="col-lg-6 d-flex flex-column justify-content-center p-0 h-100"
+          >
+            <img
+              src="images/postrent.jpg"
+              alt="House Owner"
+              class="post-rental-img img-fluid w-100 h-100 object-fit-cover"
+              style="
+                height: 100%;
+                object-fit: cover;
+                border-bottom-left-radius: 10px;
+                border-top-left-radius: 10px;
+              "
+            />
+          </div>
+
+          <div
+            class="col-lg-6 post-rental-text bg-dark text-white p-5 d-flex flex-column justify-content-center"
+            style="
+              border-bottom-right-radius: 10px;
+              border-top-right-radius: 10px;
+            "
+          >
+            <h6
+              class="text-uppercase mb-3 fw-semibold opacity-75"
+              style="letter-spacing: 1px"
+            >
+              For House Owner
+            </h6>
+            <h1 class="fw-bold mb-3" style="font-size: 2.5rem">
+              Where Your House Meets <br />
+              The Right Tenant
+            </h1>
+            <p class="mb-3" style="font-size: 1.1rem">
+              Get your house listed on Ghorkhujo and connect with tenants
+              looking for a home like yours.
+            </p>
+            <ul class="list-unstyled mb-4">
+              <li class="d-flex align-items-center mb-2">
+                <span class="checkmark-icon me-2">&#10003;</span> Reach Verified
+                Tenants
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <span class="checkmark-icon me-2">&#10003;</span> Fast & Easy
+                Listing Process
+              </li>
+              <li class="d-flex align-items-center">
+                <span class="checkmark-icon me-2">&#10003;</span> Secure &
+                Trusted Platform
+              </li>
+            </ul>
+            <button
+              class="btn btn-green btn-lg px-5 py-2 mt-2"
+              style="max-width: 220px"
+            >
+              Post Rental
+            </button>
           </div>
         </div>
-
-        <div class="mb-4 find-learn-icon d-flex align-items-start gap-3">
-          <i class="bi bi-shield-check fs-4 text-success"></i>
-          <div>
-            <h6 class="mb-1 fw-semibold">Find the best house in Bangladesh</h6>
-            <p class="mb-0 text-muted">We have a wide range of houses to choose from, and we are sure you will find the perfect one for you.</p>
-          </div>
-        </div>
-
-        <div class="d-flex gap-3 flex-wrap find-learn-btn">
-          <a href="#" class="btn" style="background-color: #14a800; color: white;">Sign up for free</a>
-          <a href="#" class="btn" style="color: #14a800; border: 1px solid #14a800;">Learn how to post</a>
-        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-
-<!-- post rental section -->
-<section class="post-rental-section modern-split-section">
-  <div class="container">
-    <div class="row align-items-stretch">
-
-      <div class="col-lg-6 d-flex flex-column justify-content-center p-0 h-100">
-        <img src="images/postrent.jpg" alt="House Owner" class="post-rental-img img-fluid w-100 h-100 object-fit-cover " style="height:100%; object-fit:cover; border-bottom-left-radius: 10px; border-top-left-radius: 10px;">
-      </div>
-
-      <div class="col-lg-6 post-rental-text bg-dark text-white  p-5 d-flex flex-column justify-content-center" style="border-bottom-right-radius: 10px; border-top-right-radius: 10px;">
-        <h6 class="text-uppercase mb-3 fw-semibold opacity-75" style="letter-spacing:1px;">For House Owner</h6>
-        <h1 class="fw-bold mb-3" style="font-size:2.5rem;">Where Your House Meets <br> The Right Tenant</h1>
-        <p class="mb-3" style="font-size:1.1rem;">Get your house listed on Ghorkhujo and connect with tenants looking for a home like yours.</p>
-        <ul class="list-unstyled mb-4">
-          <li class="d-flex align-items-center mb-2"><span class="checkmark-icon me-2">&#10003;</span> Reach Verified Tenants</li>
-          <li class="d-flex align-items-center mb-2"><span class="checkmark-icon me-2">&#10003;</span> Fast & Easy Listing Process</li>
-          <li class="d-flex align-items-center"><span class="checkmark-icon me-2">&#10003;</span> Secure & Trusted Platform</li>
-        </ul>
-        <button class="btn btn-green btn-lg px-5 py-2 mt-2" style="max-width:220px;">Post Rental</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- find best home section  -->
- <section class="find-best-home-section">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6 d-flex flex-column align-items-center">
-        <img src="images/home.png" alt="Home" class="img-fluid mb-4" style="max-width: 600px;">
-        <!-- <div class="d-flex justify-content-center gap-4 icon-row">
+    <!-- find best home section  -->
+    <section class="find-best-home-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 d-flex flex-column align-items-center">
+            <img
+              src="images/home.png"
+              alt="Home"
+              class="img-fluid mb-4"
+              style="max-width: 600px"
+            />
+            <!-- <div class="d-flex justify-content-center gap-4 icon-row">
           <img src="images/verified.png" alt="Verified" width="60">
           <img src="images/trust.png" alt="Trust" width="60">
           <img src="images/secure.png" alt="Secure" width="60">
         </div> -->
+          </div>
+          <div
+            class="col-lg-6 find-best-home-text text-white custom-green-bg rounded-3 p-5"
+          >
+            <h1>Find The Best <br />House in Bangladesh</h1>
+            <p class="pt-3 text-start">
+              Ghorkhujo is an online platform that helps you find the best house
+              in Bangladesh. We have a wide range of houses to choose from, and
+              we are sure you will find the perfect one for you.
+            </p>
+
+            <button class="btn-green mt-3 w-100">Find Home</button>
+          </div>
+        </div>
       </div>
-      <div class="col-lg-6 find-best-home-text text-white custom-green-bg rounded-3 p-5">
-        <h1>Find The Best <br>House in Bangladesh </h1>
-        <p class="pt-3 text-start">Ghorkhujo is an online platform that helps you find the best house in Bangladesh. We have a wide range of houses to choose from, and we are sure you will find the perfect one for you.</p>
-        
-        <button class="btn-green mt-3 w-100">Find Home</button>
+    </section>
+
+    <!----------------- Why Chooses Us  ------------------>
+
+    <section class="choose-section py-md-5 py-2">
+      <div class="container mx-auto">
+        <div class="row g-5">
+          <div class="col-md-6 col-12 text-center mb-4 mb-md-0">
+            <div class="choose-img">
+              <img src="images/choose.jpg" class="img-fluid" alt="choose" />
+            </div>
+          </div>
+
+          <div class="col-md-6 col-12 chooses-text">
+            <h6 class="text-danger mb-4">Learn something new every day</h6>
+            <h2 class="mb-2">Why Choose Us?</h2>
+            <p>
+              We help you find the best home, flat, office or land in your
+              desired location — verified and affordable.
+            </p>
+            <ul class="list-check mt-4 lh-lg">
+              <li>Verified Listings Only</li>
+              <li>Affordable Rent & Purchase</li>
+              <li>Trusted by 10,000+ Users</li>
+            </ul>
+            <button class="btn-custom mt-5">Read More</button>
+          </div>
+        </div>
       </div>
+    </section>
 
-    </div>
-  </div>
- </section>
+    <!-- ensure section -->
+    <section class="py-5 bg-light">
+      <div class="container text-center">
+        <h1 class="mb-5 fw-bold">What We Ensure?</h1>
+        <div class="row g-4">
+          <!-- Service 1 -->
+          <div class="col-md-4">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <h5>Valid Listings</h5>
+              <p>We ensure that all listings are verified and up-to-date.</p>
+              <a href="#" class="btn btn-outline-dark">Read More</a>
+            </div>
+          </div>
 
-<!-- stat section -->
-<section class="statistics-section bg-light">
-  <div class="container py-5">
-    <div class="row text-center">
-      <div class="col-md-3 col-6 mb-4">
-        <div class="stat-icon"><i class="fas fa-list"></i></div>
-        <div class="stat-number" data-target="2675">0</div>
-      <div class="stat-text">Active Listing</div>
-    </div>
-    <div class="col-md-3 col-6 mb-4">
-      <div class="stat-icon"><i class="fas fa-city"></i></div>
-      <div class="stat-number" data-target="25">0</div>
-      <div class="stat-text">Cities Covered</div>
-    </div>
-    <div class="col-md-3 col-6 mb-4">
-      <div class="stat-icon"><i class="fas fa-home"></i></div>
-      <div class="stat-number" data-target="3340">0</div>
-      <div class="stat-text">Properties Listed</div>
-    </div>
-    <div class="col-md-3 col-6 mb-4">
-      <div class="stat-icon"><i class="fas fa-users"></i></div>
-      <div class="stat-number" data-target="5000">0</div>
-      <div class="stat-text">People using Us</div>
-    </div>
-  </div>
-</div>
-</section>
+          <!-- Service 2 (Highlighted) -->
+          <div class="col-md-4">
+            <div class="service-card service-highlight">
+              <div class="service-icon" style="border: 2px solid white">
+                <i class="fas fa-lock"></i>
+              </div>
+              <h5>Secure Transactions</h5>
+              <p>We prioritize your safety and ensure secure transactions.</p>
+              <a href="#" class="btn btn-outline-dark text-white">Read More</a>
+            </div>
+          </div>
 
+          <!-- Service 3 -->
+          <div class="col-md-4">
+            <div class="service-card">
+              <div class="service-icon"><i class="fas fa-headset"></i></div>
+              <h5>Quick Support</h5>
+              <p>We offer quick and efficient support to all of our users.</p>
+              <a href="#" class="btn btn-outline-dark">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section class="py-5 bg-light">
-  <div class="container text-center">
-    <h1 class="mb-5 fw-bold">What We Ensure?</h1>
-    <div class="row g-4">
-      <!-- Service 1 -->
-      <div class="col-md-4">
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-check-circle"></i></div>
-          <h5>Valid Listings</h5>
-          <p>We ensure that all listings are verified and up-to-date.</p>
-          <a href="#" class="btn btn-outline-dark">Read More</a>
+    <!-- -------------- Cetagorise Section Start ----------------->
+
+    <div class="container text-center my-5">
+      <p class="title-text">Find what you’re looking for</p>
+      <h2 class="mb-4">Top Property Categories</h2>
+
+      <div class="row g-4">
+        <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+          <div class="category-box">
+            <img src="images/icon/building.png" alt="Flat" />
+            <h5>Flat</h5>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+          <div class="category-box">
+            <img src="images/icon/house.png" alt="House" />
+            <h5>House</h5>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+          <div class="category-box">
+            <img src="images/icon/sale.gif" alt="Shop" />
+            <h5>Shop</h5>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+          <div class="category-box">
+            <img src="images/icon/land.png" alt="Land" />
+            <h5>Land</h5>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+          <div class="category-box">
+            <img src="images/icon/rent.png" alt="Rent" />
+            <h5>For Rent</h5>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+          <div class="category-box">
+            <img src="images/icon/redshop.png" alt="Sale" />
+            <h5>For Sale</h5>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+          <div class="category-box">
+            <img src="images/icon/office.png" alt="Office" />
+            <h5>Office Space</h5>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+          <div class="category-box">
+            <img src="images/icon/location.png" alt="Location" />
+            <h5>By Location</h5>
+          </div>
         </div>
       </div>
 
-      <!-- Service 2 (Highlighted) -->
-      <div class="col-md-4">
-        <div class="service-card service-highlight">
-          <div class="service-icon" style="border: 2px solid white;"><i class="fas fa-lock"></i></div>
-          <h5>Secure Transactions</h5>
-          <p>We prioritize your safety and ensure secure transactions.</p>
-          <a href="#" class="btn btn-outline-dark text-white">Read More</a>
+      <div class="mt-4">
+        <button class="view-all-btn">View All Properties</button>
+      </div>
+    </div>
+    <!---------------- Cetagorise Section End ----------------->
+
+    <!-- =================== Footer Start =================== -->
+    <footer class="footer-section bg-dark text-white pt-5 pb-3 mt-5">
+      <div class="container">
+        <div class="row">
+          <!-- For Renters -->
+          <div class="col-6 col-md-3 mb-4">
+            <h6 class="text-uppercase mb-3 fw-semibold opacity-75">
+              For Renters
+            </h6>
+            <ul class="list-unstyled">
+              <li><a href="#" class="footer-link">Find a Home</a></li>
+              <li><a href="#" class="footer-link">Browse Listings</a></li>
+              <li><a href="#" class="footer-link">How it Works</a></li>
+              <li><a href="#" class="footer-link">How to Rent</a></li>
+              <li><a href="#" class="footer-link">Renting Guide</a></li>
+              <li><a href="#" class="footer-link">FAQs</a></li>
+            </ul>
+          </div>
+          <!-- For Owners -->
+          <div class="col-6 col-md-3 mb-4">
+            <h6 class="text-uppercase mb-3 fw-semibold opacity-75">
+              For Owners
+            </h6>
+            <ul class="list-unstyled">
+              <li><a href="#" class="footer-link">Post Rental</a></li>
+              <li><a href="#" class="footer-link">Owner Dashboard</a></li>
+              <li><a href="#" class="footer-link">Safety Tips</a></li>
+              <li><a href="#" class="footer-link">Support</a></li>
+            </ul>
+          </div>
+          <!-- Resources -->
+          <div class="col-6 col-md-3 mb-4">
+            <h6 class="text-uppercase mb-3 fw-semibold opacity-75">
+              Resources
+            </h6>
+            <ul class="list-unstyled">
+              <li><a href="#" class="footer-link">Help Center</a></li>
+              <li><a href="#" class="footer-link">Blog</a></li>
+              <li><a href="#" class="footer-link">Guides</a></li>
+              <li><a href="#" class="footer-link">Contact Us</a></li>
+            </ul>
+          </div>
+          <!-- Company -->
+          <div class="col-6 col-md-3 mb-4">
+            <h6 class="text-uppercase mb-3 fw-semibold opacity-75">Company</h6>
+            <ul class="list-unstyled">
+              <li><a href="#" class="footer-link">About Us</a></li>
+              <li><a href="#" class="footer-link">Careers</a></li>
+              <li><a href="#" class="footer-link">Leadership</a></li>
+              <li>
+                <a href="#" class="footer-link">Trust, Safety & Security</a>
+              </li>
+              <li><a href="#" class="footer-link">Our Impact</a></li>
+              <li><a href="#" class="footer-link">Modern Renting</a></li>
+              <li><a href="#" class="footer-link">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div
+            class="col-12 footer-terms text-center d-flex justify-content-center gap-5"
+          >
+            <h6><a href="#" class="footer-link">Terms of Service</a></h6>
+            <h6><a href="#" class="footer-link">Privacy Policy</a></h6>
+            <h6><a href="#" class="footer-link">Cookie Policy</a></h6>
+            <h6><a href="#" class="footer-link">Accessibility</a></h6>
+          </div>
+        </div>
+        <hr class="border-secondary my-3" />
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+            <span class="small"
+              >&copy; 2024 GhorKhujo. All rights reserved.</span
+            >
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <a href="#" class="footer-social mx-2"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a href="#" class="footer-social mx-2"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+            <a href="#" class="footer-social mx-2"
+              ><i class="bi bi-twitter"></i
+            ></a>
+            <a href="#" class="footer-social mx-2"
+              ><i class="bi bi-instagram"></i
+            ></a>
+          </div>
         </div>
       </div>
-
-      <!-- Service 3 -->
-      <div class="col-md-4">
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-headset"></i></div>
-          <h5>Quick Support</h5>
-          <p>We offer quick and efficient support to all of our users.</p>
-          <a href="#" class="btn btn-outline-dark">Read More</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- =================== Footer Start =================== -->
-<footer class="footer-section bg-dark text-white pt-5 pb-3 mt-5">
-  <div class="container">
-    <div class="row">
-      <!-- For Renters -->
-      <div class="col-6 col-md-3 mb-4">
-        <h6 class="text-uppercase mb-3 fw-semibold opacity-75">For Renters</h6>
-        <ul class="list-unstyled">
-          <li><a href="#" class="footer-link">Find a Home</a></li>
-          <li><a href="#" class="footer-link">Browse Listings</a></li>
-          <li><a href="#" class="footer-link">How it Works</a></li>
-          <li><a href="#" class="footer-link">How to Rent</a></li>
-          <li><a href="#" class="footer-link">Renting Guide</a></li>
-          <li><a href="#" class="footer-link">FAQs</a></li>
-        
-        </ul>
-      </div>
-      <!-- For Owners -->
-      <div class="col-6 col-md-3 mb-4">
-        <h6 class="text-uppercase mb-3 fw-semibold opacity-75">For Owners</h6>
-        <ul class="list-unstyled">
-          <li><a href="#" class="footer-link">Post Rental</a></li>
-          <li><a href="#" class="footer-link">Owner Dashboard</a></li>
-          <li><a href="#" class="footer-link">Safety Tips</a></li>
-          <li><a href="#" class="footer-link">Support</a></li>
-        </ul>
-      </div>
-      <!-- Resources -->
-      <div class="col-6 col-md-3 mb-4">
-        <h6 class="text-uppercase mb-3 fw-semibold opacity-75">Resources</h6>
-        <ul class="list-unstyled">
-          <li><a href="#" class="footer-link">Help Center</a></li>
-          <li><a href="#" class="footer-link">Blog</a></li>
-          <li><a href="#" class="footer-link">Guides</a></li>
-          <li><a href="#" class="footer-link">Contact Us</a></li>
-        </ul>
-      </div>
-      <!-- Company -->
-      <div class="col-6 col-md-3 mb-4">
-        <h6 class="text-uppercase mb-3 fw-semibold opacity-75">Company</h6>
-        <ul class="list-unstyled">
-          <li><a href="#" class="footer-link">About Us</a></li>
-          <li><a href="#" class="footer-link">Careers</a></li>
-          <li><a href="#" class="footer-link">Leadership</a></li>
-          <li><a href="#" class="footer-link">Trust, Safety & Security</a></li>
-          <li><a href="#" class="footer-link">Our Impact</a></li>
-          <li><a href="#" class="footer-link">Modern Renting</a></li>
-          <li><a href="#" class="footer-link">Contact Us</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-12 footer-terms text-center d-flex justify-content-center gap-5">
-        <h6><a href="#" class="footer-link">Terms of Service</a></h6>
-        <h6><a href="#" class="footer-link">Privacy Policy</a></h6>
-        <h6><a href="#" class="footer-link">Cookie Policy</a></h6>
-        <h6><a href="#" class="footer-link">Accessibility</a></h6>
-      </div>
-    </div>
-    <hr class="border-secondary my-3">
-    <div class="row align-items-center">
-      <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
-        <span class="small">&copy; 2024 GhorKhujo. All rights reserved.</span>
-      </div>
-      <div class="col-md-6 text-center text-md-end">
-        <a href="#" class="footer-social mx-2"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="footer-social mx-2"><i class="bi bi-linkedin"></i></a>
-        <a href="#" class="footer-social mx-2"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="footer-social mx-2"><i class="bi bi-instagram"></i></a>
-      </div>
-    </div>
-  </div>
-</footer>
-<!-- =================== Footer End =================== -->
+    </footer>
+    <!-- =================== Footer End =================== -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
