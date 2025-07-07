@@ -1,3 +1,13 @@
+// Loader hide logic
+window.addEventListener('load', function() {
+  const loader = document.getElementById('ghorkhujo-loader');
+  if (loader) {
+    loader.classList.add('fade-out');
+    setTimeout(() => loader.style.display = 'none', 600);
+  }
+});
+
+
 document.addEventListener('DOMContentLoaded', function() {
     // Get the navbar collapse element
     const navbarCollapse = document.querySelector('.navbar-collapse');
@@ -73,3 +83,7 @@ const swiper = new Swiper('.mySwiper', {
     };
     updateCount();
   });
+
+
+
+  

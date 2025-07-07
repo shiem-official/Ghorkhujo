@@ -7,6 +7,96 @@ a {
   text-decoration: none;
 }
 
+
+/* Custom Loader Styles */
+#ghorkhujo-loader {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s;
+}
+
+#ghorkhujo-loader .loader-house {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 18px;
+  animation: loader-bounce 1.2s infinite;
+}
+
+#ghorkhujo-loader .roof {
+  width: 0;
+  height: 0;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-bottom: 25px solid #14a800;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#ghorkhujo-loader .walls {
+  width: 50px;
+  height: 30px;
+  background: #14a800;
+  position: absolute;
+  left: 10px;
+  top: 25px;
+  border-radius: 0 0 8px 8px;
+}
+
+#ghorkhujo-loader .door {
+  width: 14px;
+  height: 18px;
+  background: #fff;
+  position: absolute;
+  left: 28px;
+  top: 37px;
+  border-radius: 2px;
+  box-shadow: 0 0 0 2px #14a800;
+}
+
+#ghorkhujo-loader .loader-bounce {
+  position: absolute;
+  left: 50%;
+  bottom: -18px;
+  width: 18px;
+  height: 18px;
+  background: #14a800;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  opacity: 0.7;
+  animation: loader-bounce-ball 1.2s infinite;
+}
+
+@keyframes loader-bounce {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-18px);}
+}
+@keyframes loader-bounce-ball {
+  0%, 100% { transform: scale(1);}
+  50% { transform: scale(0.7);}
+}
+
+#ghorkhujo-loader .loader-text {
+  font-family: 'Poppins', Arial, sans-serif;
+  color: #14a800;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-align: center;
+}
+#ghorkhujo-loader.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
 /* Navbar Styles */
 .navbar {
   padding: 1rem 0;
@@ -676,7 +766,6 @@ a {
 /* Prevent horizontal scroll on mobile */
 html, body {
   max-width: 100vw;
-  overflow-x: hidden;
 }
 
 @media (max-width: 400px) {
@@ -707,3 +796,4 @@ html, body {
     max-width: 90vw;
   }
 }
+
