@@ -7,6 +7,47 @@ window.addEventListener('load', function() {
   }
 });
 
+// Drawer menu logic
+function openDrawer() {
+  document.getElementById('drawerMenu').classList.add('open');
+  document.getElementById('drawerBackdrop').classList.add('show');
+}
+function closeDrawer() {
+  document.getElementById('drawerMenu').classList.remove('open');
+  document.getElementById('drawerBackdrop').classList.remove('show');
+}
+document.getElementById('drawerToggle')?.addEventListener('click', openDrawer);
+document.getElementById('drawerClose')?.addEventListener('click', closeDrawer);
+document.getElementById('drawerBackdrop')?.addEventListener('click', closeDrawer);
+
+// Bottom nav active state
+const bottomNavLinks = document.querySelectorAll('.bottom-nav-link');
+bottomNavLinks.forEach(link => {
+  link.addEventListener('click', function(e) {
+    bottomNavLinks.forEach(l => l.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+
+// Hero and header action buttons (scroll to sections or open modals in future)
+document.getElementById('findHomeBtn')?.addEventListener('click', () => window.scrollTo({top: 600, behavior: 'smooth'}));
+document.getElementById('postRentalBtn')?.addEventListener('click', () => window.scrollTo({top: 1200, behavior: 'smooth'}));
+document.getElementById('heroFindHome')?.addEventListener('click', () => window.scrollTo({top: 600, behavior: 'smooth'}));
+document.getElementById('heroPostRental')?.addEventListener('click', () => window.scrollTo({top: 1200, behavior: 'smooth'}));
+
+// Microinteraction: quick action card ripple
+const quickCards = document.querySelectorAll('.quick-action-card');
+quickCards.forEach(card => {
+  card.addEventListener('mousedown', function(e) {
+    this.classList.add('active');
+  });
+  card.addEventListener('mouseup', function(e) {
+    this.classList.remove('active');
+  });
+  card.addEventListener('mouseleave', function(e) {
+    this.classList.remove('active');
+  });
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     // Get the navbar collapse element
@@ -66,24 +107,47 @@ const swiper = new Swiper('.mySwiper', {
     }
   });
 
-   // Counter animation stat section
+// Animated Counter for Stat Section
+function animateCounters() {
   const counters = document.querySelectorAll('.stat-number');
   counters.forEach(counter => {
     const updateCount = () => {
       const target = +counter.getAttribute('data-target');
       const count = +counter.innerText;
-      const increment = target / 200;
-
+      const increment = Math.max(1, target / 120);
       if(count < target) {
         counter.innerText = Math.ceil(count + increment);
-        setTimeout(updateCount, 20);
+        setTimeout(updateCount, 18);
       } else {
-        counter.innerText = target + '+';
+        counter.innerText = target;
       }
     };
     updateCount();
   });
-
-
+}
+// Only animate when section is visible
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top < window.innerHeight &&
+    rect.bottom > 0
+  );
+}
+let statsAnimated = false;
+window.addEventListener('scroll', function() {
+  const statSection = document.querySelector('.stat-card');
+  if (!statsAnimated && statSection && isElementInViewport(statSection)) {
+    animateCounters();
+    statsAnimated = true;
+  }
+});
+// Fallback: animate if already in view on load
+window.addEventListener('DOMContentLoaded', function() {
+  const statSection = document.querySelector('.stat-card');
+  if (statSection && isElementInViewport(statSection)) {
+    animateCounters();
+    statsAnimated = true;
+  }
+});
 
   
