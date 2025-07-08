@@ -123,6 +123,16 @@ body {
   z-index: 1050;
   border-bottom: 1px solid #f0f0f0;
 }
+#findHomeBtn:hover, #findHomeBtn:focus {
+  background: #14a800 !important;
+  color: #fff !important;
+  border-color: #14a800 !important;
+}
+#postRentalBtn:hover, #postRentalBtn:focus {
+  background: #0e7c00 !important;
+  border-color: #0e7c00 !important;
+  color: #fff !important;
+}
 
 /* Drawer Menu */
 .drawer-menu {
@@ -171,23 +181,16 @@ body {
   opacity: 1;
   pointer-events: all;
 }
-
-/* Drawer Auth Buttons (Mobile) */
-.drawer-auth-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+#drawerSignIn:hover, #drawerSignIn:focus {
+  background: #14a800 !important;
+  color: #fff !important;
+  border-color: #14a800 !important;
 }
-.drawer-auth-buttons .btn {
-  width: 100%;
-  font-size: 1.08rem;
-  padding: 0.7rem 0;
-  border-radius: 2rem;
-  box-shadow: 0 1px 4px rgba(20,168,0,0.06);
+#drawerSignUp:hover, #drawerSignUp:focus {
+  background: #0e7c00 !important;
+  border-color: #0e7c00 !important;
+  color: #fff !important;
 }
-
 /* Hero Section */
 .hero-section {
   min-height: 60vh;
@@ -293,7 +296,7 @@ body {
   flex: 1 1 0;
   text-align: center;
   color: #888;
-  font-size: 1.2rem;
+  font-size: 12px;
   padding: 0.5rem 0 0.2rem 0;
   display: flex;
   flex-direction: column;

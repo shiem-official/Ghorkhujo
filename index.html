@@ -25,17 +25,16 @@
     </div>
     <div class="loader-text">Finding Your Home...</div>
   </div>
-
   <!-- Sticky Header -->
   <header class="modern-header sticky-top shadow-sm">
     <div class="container-fluid d-flex align-items-center justify-content-between py-2 px-3">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
         <!-- <img src="images/ghorkhujo2.png" alt="Logo" height="44" /> -->
-        <span class="fw-bold fs-4 text-success">GhorKhojo</span>
+        <span class="fw-bold fs-4" style="color: #14a800;">GhorKhujo</span>
       </a>
       <div class="d-none d-md-flex gap-2">
-        <button class="btn btn-outline-success rounded-pill px-4 fw-semibold" id="findHomeBtn">Sign in</button>
-        <button class="btn btn-success rounded-pill px-4 fw-semibold" id="postRentalBtn">Sign up</button>
+        <a href="signin.html" class="btn rounded-pill px-4 fw-semibold" id="findHomeBtn" style="text-decoration: none; color: #14a800; border: 2px solid #14a800; background: #fff;">Sign in</a>
+        <a href="signup.html" class="btn rounded-pill px-4 fw-semibold" id="postRentalBtn" style="text-decoration: none; color: #fff; background: #14a800; border: 2px solid #14a800;">Sign up</a>
       </div>
       <button class="btn btn-link d-md-none fs-2 text-dark" id="drawerToggle"><i class="fa fa-bars"></i></button>
     </div>
@@ -48,11 +47,11 @@
       <button class="btn btn-link fs-3 text-dark" id="drawerClose"><i class="fa fa-times"></i></button>
     </div>
     <div class="drawer-auth-buttons px-3 pb-3 d-flex gap-2 flex-column">
-      <button class="btn btn-outline-success rounded-pill fw-semibold" style="min-width: 100px;" id="drawerSignIn">Sign In</button>
-      <button class="btn btn-success rounded-pill fw-semibold" style="min-width: 100px;" id="drawerSignUp">Sign Up</button>
+      <a href="signin.html" class="btn rounded-pill fw-semibold" style="min-width: 100px; text-decoration: none; color: #14a800; border: 2px solid #14a800; background: #fff;" id="drawerSignIn">Sign In</a>
+      <a href="signup.html" class="btn rounded-pill fw-semibold" style="min-width: 100px; text-decoration: none; color: #fff; background: #14a800; border: 2px solid #14a800;" id="drawerSignUp">Sign Up</a>
     </div>
     <ul class="list-unstyled px-3">
-      <li><a href="#" class="drawer-link"><i class="fa fa-home me-2"></i>Home</a></li>
+      <li><a href="index.html" class="drawer-link"><i class="fa fa-home me-2"></i>Home</a></li>
       <li><a href="#" class="drawer-link"><i class="fa fa-search me-2"></i>Find Home</a></li>
       <li><a href="#" class="drawer-link"><i class="fa fa-plus-circle me-2"></i>Post Rental</a></li>
       <li><a href="#" class="drawer-link"><i class="fa fa-user me-2"></i>Profile</a></li>
@@ -251,7 +250,38 @@
     </div>
   </section>
 
-  <!-- Social Features Preview -->
+ 
+  <!-- How It Works Section -->
+  <section class="how-it-works-section py-5">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-5">How It Works</h2>
+      <div class="row g-4 justify-content-center text-center">
+        <div class="col-12 col-md-3">
+          <div class="how-step-card p-4 rounded-4 shadow-sm h-100">
+            <div class="how-step-icon mb-3"><i class="fa fa-search-location fa-2x text-success"></i></div>
+            <h6 class="fw-semibold mb-2">1. Search</h6>
+            <p class="small text-muted mb-0">Browse and filter thousands of verified rental listings.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="how-step-card p-4 rounded-4 shadow-sm h-100">
+            <div class="how-step-icon mb-3"><i class="fa fa-comments fa-2x text-primary"></i></div>
+            <h6 class="fw-semibold mb-2">2. Connect</h6>
+            <p class="small text-muted mb-0">Contact owners or tenants directly through our platform.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="how-step-card p-4 rounded-4 shadow-sm h-100">
+            <div class="how-step-icon mb-3"><i class="fa fa-home fa-2x text-warning"></i></div>
+            <h6 class="fw-semibold mb-2">3. Visit & Finalize</h6>
+            <p class="small text-muted mb-0">Schedule a visit, finalize the deal, and move in or post your rental!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- Social Features Preview -->
   <section class="container py-5">
     <h2 class="fw-bold mb-4 text-center">What Our Users Say</h2>
     <div class="row g-4 justify-content-center">
@@ -283,37 +313,6 @@
       </div>
     </div>
   </section>
-
-  <!-- How It Works Section -->
-  <section class="how-it-works-section py-5">
-    <div class="container">
-      <h2 class="fw-bold text-center mb-5">How It Works</h2>
-      <div class="row g-4 justify-content-center text-center">
-        <div class="col-12 col-md-3">
-          <div class="how-step-card p-4 rounded-4 shadow-sm h-100">
-            <div class="how-step-icon mb-3"><i class="fa fa-search-location fa-2x text-success"></i></div>
-            <h6 class="fw-semibold mb-2">1. Search</h6>
-            <p class="small text-muted mb-0">Browse and filter thousands of verified rental listings.</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-3">
-          <div class="how-step-card p-4 rounded-4 shadow-sm h-100">
-            <div class="how-step-icon mb-3"><i class="fa fa-comments fa-2x text-primary"></i></div>
-            <h6 class="fw-semibold mb-2">2. Connect</h6>
-            <p class="small text-muted mb-0">Contact owners or tenants directly through our platform.</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-3">
-          <div class="how-step-card p-4 rounded-4 shadow-sm h-100">
-            <div class="how-step-icon mb-3"><i class="fa fa-home fa-2x text-warning"></i></div>
-            <h6 class="fw-semibold mb-2">3. Visit & Finalize</h6>
-            <p class="small text-muted mb-0">Schedule a visit, finalize the deal, and move in or post your rental!</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Newsletter Signup Section -->
   <section class="newsletter-section py-5">
     <div class="container text-center">
@@ -368,7 +367,7 @@
       </div>
       <hr class="border-secondary my-3" />
       <div class="row align-items-center">
-        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0 pb-3">
           <span class="small">&copy; 2024 GhorKhojo. All rights reserved.</span>
         </div>
         <div class="col-md-6 text-center text-md-end">
@@ -383,7 +382,7 @@
 
   <!-- Bottom Navigation Bar (Mobile) -->
   <nav class="bottom-nav d-md-none">
-    <a href="#" class="bottom-nav-link active"><i class="fa fa-home"></i><span>Home</span></a>
+    <a href="index.html" class="bottom-nav-link active"><i class="fa fa-home"></i><span>Home</span></a>
     <a href="#" class="bottom-nav-link"><i class="fa fa-search"></i><span>Find</span></a>
     <a href="#" class="bottom-nav-link post-btn"><i class="fa fa-plus-circle"></i><span>Post</span></a>
     <a href="#" class="bottom-nav-link"><i class="fa fa-heart"></i><span>Favs</span></a>
@@ -397,6 +396,7 @@
   <script>
     AOS.init({ duration: 400, once: true, offset: 120 });
   </script>
+  
 </body>
 
 </html>

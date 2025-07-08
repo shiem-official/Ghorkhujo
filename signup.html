@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GhorKhujo</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <style>
+    .btn[style*='#14a800']:hover, .btn[style*='#14a800']:focus {
+      background: #0e7c00 !important;
+      color: #fff !important;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Loader -->
+  <div id="ghorkhujo-loader">
+    <div class="loader-house">
+      <div class="roof"></div>
+      <div class="walls"></div>
+      <div class="door"></div>
+      <div class="loader-bounce"></div>
+    </div>
+    <div class="loader-text">Finding Your Home...</div>
+  </div>
+
+  <!-- Sticky Header -->
+  <header class="modern-header sticky-top shadow-sm">
+    <div class="container-fluid d-flex align-items-center justify-content-between py-2 px-3">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <!-- <img src="images/ghorkhujo2.png" alt="Logo" height="44" /> -->
+        <span class="fw-bold fs-4" style="color: #14a800;">GhorKhujo</span>
+      </a>
+      <div class="d-none d-md-flex gap-2">
+        <a href="signin.html" class="btn rounded-pill px-4 fw-semibold" id="findHomeBtn" style="text-decoration: none; color: #14a800; border: 2px solid #14a800; background: #fff;">Sign in</a>
+        <a href="signup.html" class="btn rounded-pill px-4 fw-semibold" id="postRentalBtn" style="text-decoration: none; color: #fff; background: #14a800; border: 2px solid #14a800;">Sign up</a>
+      </div>
+      <button class="btn btn-link d-md-none fs-2 text-dark" id="drawerToggle"><i class="fa fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- Drawer Menu -->
+  <aside id="drawerMenu" class="drawer-menu">
+    <div class="drawer-header d-flex align-items-center justify-content-between px-3 py-3">
+      <span class="fw-bold fs-5">Menu</span>
+      <button class="btn btn-link fs-3 text-dark" id="drawerClose"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="drawer-auth-buttons px-3 pb-3 d-flex gap-2 flex-column">
+      <a href="signin.html" class="btn rounded-pill fw-semibold" style="min-width: 100px; text-decoration: none; color: #14a800; border: 2px solid #14a800; background: #fff;" id="drawerSignIn">Sign In</a>
+      <a href="signup.html" class="btn rounded-pill fw-semibold" style="min-width: 100px; text-decoration: none; color: #fff; background: #14a800; border: 2px solid #14a800;" id="drawerSignUp">Sign Up</a>
+    </div>
+    <ul class="list-unstyled px-3">
+      <li><a href="index.html" class="drawer-link"><i class="fa fa-home me-2"></i>Home</a></li>
+      <li><a href="#" class="drawer-link"><i class="fa fa-search me-2"></i>Find Home</a></li>
+      <li><a href="#" class="drawer-link"><i class="fa fa-plus-circle me-2"></i>Post Rental</a></li>
+      <li><a href="#" class="drawer-link"><i class="fa fa-user me-2"></i>Profile</a></li>
+      <li><a href="#" class="drawer-link"><i class="fa fa-heart me-2"></i>Favorites</a></li>
+      <li><a href="#" class="drawer-link"><i class="fa fa-info-circle me-2"></i>About</a></li>
+      <li><a href="#" class="drawer-link"><i class="fa fa-envelope me-2"></i>Contact</a></li>
+    </ul>
+  </aside>
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+
+  <!-- signup form -->
+
+  <div class="container d-flex justify-content-center align-items-center">
+    <div class="col-md-6 col-lg-5">
+      <div class="card p-4 border-0 shadow-sm" style="max-width: 400px; margin: 2rem auto; border-radius: 1.25rem;">
+        <div class="mb-4 text-center">
+          <div class="fw-semibold text-muted" style="font-size: 1.05rem;">Start your journey</div>
+          <h2 class="fw-bold mb-0" style="font-size: 1.6rem; color: #14a800;">Sign Up to GhorKhujo</h2>
+        </div>
+        <form autocomplete="off">
+          <div class="mb-3">
+            <input type="text" class="form-control form-control-lg" id="fullName" placeholder="Your name">
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control form-control-lg" id="emailAddress" placeholder="Email address">
+          </div>
+          <div class="mb-1 position-relative">
+            <input type="password" class="form-control form-control-lg" id="passwordField" placeholder="Password">
+            <span class="position-absolute top-50 end-0 translate-middle-y pe-3" style="cursor:pointer;" onclick="togglePassword()">
+              <i class="fa fa-eye" id="togglePasswordIcon"></i>
+            </span>
+          </div>
+          <!-- <div class="mb-3 text-end">
+            <a href="#" class="small text-decoration-none" style="color: #14a800;">Forgot password?</a>
+          </div> -->
+          <div class="d-grid mb-3 mt-3">
+            <button type="submit" class="btn btn-lg rounded-2 fw-semibold" style="background: #14a800; color: #fff; border: none;">Sign up</button>
+          </div>
+          <div class="text-center text-secondary mb-3" style="font-size: 0.95rem;">---------- or sign up with ----------</div>
+          <div class="d-flex justify-content-center gap-3 mb-3">
+            <button type="button" class="btn btn-light border rounded-2 px-3 py-2" style="box-shadow: none;">
+              <img src="https://img.icons8.com/color/32/000000/google-logo.png" alt="Google logo" style="height: 24px; width: 24px;" />
+            </button>
+            <button type="button" class="btn btn-light border rounded-2 px-3 py-2" style="box-shadow: none;">
+              <img src="https://img.icons8.com/ios-filled/32/000000/mac-os.png" alt="Apple logo" style="height: 24px; width: 24px;" />
+            </button>
+          </div>
+        </form>
+        <div class="text-center mt-2" style="font-size: 0.97rem;">
+          Have an account? <a href="signin.html" class="fw-semibold text-decoration-none" style="color: #14a800;">Sign In</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-section bg-dark text-white pt-5 pb-3 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-md-3 mb-4">
+          <h6 class="text-uppercase mb-3 fw-semibold opacity-75">For Renters</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="footer-link">Find a Home</a></li>
+            <li><a href="#" class="footer-link">Browse Listings</a></li>
+            <li><a href="#" class="footer-link">How it Works</a></li>
+            <li><a href="#" class="footer-link">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <h6 class="text-uppercase mb-3 fw-semibold opacity-75">For Owners</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="footer-link">Post Rental</a></li>
+            <li><a href="#" class="footer-link">Owner Dashboard</a></li>
+            <li><a href="#" class="footer-link">Support</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <h6 class="text-uppercase mb-3 fw-semibold opacity-75">Resources</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="footer-link">Help Center</a></li>
+            <li><a href="#" class="footer-link">Blog</a></li>
+            <li><a href="#" class="footer-link">Guides</a></li>
+            <li><a href="#" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <h6 class="text-uppercase mb-3 fw-semibold opacity-75">Company</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="footer-link">About Us</a></li>
+            <li><a href="#" class="footer-link">Careers</a></li>
+            <li><a href="#" class="footer-link">Trust & Safety</a></li>
+            <li><a href="#" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-3" />
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0 pb-3">
+          <span class="small">&copy; 2024 GhorKhujo. All rights reserved.</span>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="#" class="footer-social mx-2"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="footer-social mx-2"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="footer-social mx-2"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="footer-social mx-2"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bottom Navigation Bar (Mobile) -->
+  <nav class="bottom-nav d-md-none">
+    <a href="index.html" class="bottom-nav-link active"><i class="fa fa-home"></i><span>Home</span></a>
+    <a href="#" class="bottom-nav-link"><i class="fa fa-search"></i><span>Find</span></a>
+    <a href="#" class="bottom-nav-link post-btn"><i class="fa fa-plus-circle"></i><span>Post</span></a>
+    <a href="#" class="bottom-nav-link"><i class="fa fa-heart"></i><span>Favs</span></a>
+    <a href="#" class="bottom-nav-link"><i class="fa fa-user"></i><span>Profile</span></a>
+  </nav>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    function togglePassword() {
+      const passwordField = document.getElementById("passwordField");
+      const icon = document.getElementById("togglePasswordIcon");
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
+      } else {
+        passwordField.type = "password";
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
+      }
+    }
+  </script>
+</body>
+
+</html>
