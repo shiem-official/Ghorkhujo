@@ -30,7 +30,7 @@
     <div class="container-fluid d-flex align-items-center justify-content-between py-2 px-3">
       <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
         <!-- <img src="images/ghorkhujo2.png" alt="Logo" height="44" /> -->
-        <span class="fw-bold fs-4" style="color: #14a800;">GhorKhujo</span>
+        <span class="fw-bold fs-4" style="color: #14a800;">GhorKhojo</span>
       </a>
       <div class="d-none d-md-flex gap-2">
         <a href="signin.html" class="btn rounded-pill px-4 fw-semibold" id="findHomeBtn" style="text-decoration: none; color: #14a800; border: 2px solid #14a800; background: #fff;">Sign in</a>
@@ -52,7 +52,7 @@
     </div>
     <ul class="list-unstyled px-3">
       <li><a href="index.html" class="drawer-link"><i class="fa fa-home me-2"></i>Home</a></li>
-      <li><a href="#" class="drawer-link"><i class="fa fa-search me-2"></i>Find Home</a></li>
+      <li><a href="listings.html" class="drawer-link"><i class="fa fa-search me-2"></i>Find Home</a></li>
       <li><a href="#" class="drawer-link"><i class="fa fa-plus-circle me-2"></i>Post Rental</a></li>
       <li><a href="#" class="drawer-link"><i class="fa fa-user me-2"></i>Profile</a></li>
       <li><a href="#" class="drawer-link"><i class="fa fa-heart me-2"></i>Favorites</a></li>
@@ -68,8 +68,8 @@
       <h1 class="display-4 fw-bold mb-3">Find or Post Your Dream Home</h1>
       <p class="lead mb-4">Bangladesh's most modern rental platform for renters & owners</p>
       <div class="d-flex flex-column flex-md-row justify-content-center gap-3 mb-4">
-        <button class="btn btn-success btn-lg rounded-pill px-5 fw-semibold" id="heroFindHome">Find Home</button>
-        <button class="btn btn-outline-light btn-lg rounded-pill px-5 fw-semibold" id="heroPostRental">Post Rental</button>
+        <a href="listings.html" class="btn btn-success btn-lg rounded-pill px-5 fw-semibold" id="heroFindHome">Find Home</a>
+        <a href="listings.html" class="btn btn-outline-light btn-lg rounded-pill px-5 fw-semibold" id="heroPostRental">Post Rental</a>
       </div>
       <form class="search-filter-bar rounded-4 shadow-sm bg-white p-3 d-flex flex-wrap gap-2 align-items-center justify-content-center mx-auto" style="max-width: 700px;">
         <select class="form-select rounded-pill flex-grow-1" style="max-width: 180px;" aria-label="Division">
@@ -111,14 +111,15 @@
   <!-- Quick Actions / Categories -->
   <section class="container py-4">
     <div class="row g-3 justify-content-center">
-      <div class="col-6 col-md-3">
+      <a href="listings.html" style="text-decoration: none; color: inherit;">
         <div class="quick-action-card text-center p-4 rounded-4 shadow-sm h-100">
           <i class="fa fa-search-location fa-2x text-success mb-2"></i>
           <h6 class="fw-semibold mb-1">Find Home</h6>
           <p class="small text-muted mb-0">Browse verified listings</p>
         </div>
-      </div>
+      </a>
       <div class="col-6 col-md-3">
+        <a href="post-rental.html" style="text-decoration: none; color: inherit;">
         <div class="quick-action-card text-center p-4 rounded-4 shadow-sm h-100">
           <i class="fa fa-plus-circle fa-2x text-primary mb-2"></i>
           <h6 class="fw-semibold mb-1">Post Rental</h6>
@@ -126,6 +127,7 @@
         </div>
       </div>
       <div class="col-6 col-md-3">
+        <a href="favorites.html" style="text-decoration: none; color: inherit;">
         <div class="quick-action-card text-center p-4 rounded-4 shadow-sm h-100">
           <i class="fa fa-heart fa-2x text-danger mb-2"></i>
           <h6 class="fw-semibold mb-1">Favorites</h6>
@@ -133,6 +135,7 @@
         </div>
       </div>
       <div class="col-6 col-md-3">
+        <a href="social.html" style="text-decoration: none; color: inherit;">
         <div class="quick-action-card text-center p-4 rounded-4 shadow-sm h-100">
           <i class="fa fa-user-friends fa-2x text-warning mb-2"></i>
           <h6 class="fw-semibold mb-1">Social</h6>
@@ -332,8 +335,8 @@
         <div class="col-6 col-md-3 mb-4">
           <h6 class="text-uppercase mb-3 fw-semibold opacity-75">For Renters</h6>
           <ul class="list-unstyled">
-            <li><a href="#" class="footer-link">Find a Home</a></li>
-            <li><a href="#" class="footer-link">Browse Listings</a></li>
+            <li><a href="listings.html" class="footer-link">Find a Home</a></li>
+            <li><a href="listings.html" class="footer-link">Browse Listings</a></li>
             <li><a href="#" class="footer-link">How it Works</a></li>
             <li><a href="#" class="footer-link">FAQs</a></li>
           </ul>
@@ -383,7 +386,7 @@
   <!-- Bottom Navigation Bar (Mobile) -->
   <nav class="bottom-nav d-md-none">
     <a href="index.html" class="bottom-nav-link active"><i class="fa fa-home"></i><span>Home</span></a>
-    <a href="#" class="bottom-nav-link"><i class="fa fa-search"></i><span>Find</span></a>
+    <a href="listings.html" class="bottom-nav-link"><i class="fa fa-search"></i><span>Find</span></a>
     <a href="#" class="bottom-nav-link post-btn"><i class="fa fa-plus-circle"></i><span>Post</span></a>
     <a href="#" class="bottom-nav-link"><i class="fa fa-heart"></i><span>Favs</span></a>
     <a href="#" class="bottom-nav-link"><i class="fa fa-user"></i><span>Profile</span></a>
@@ -397,6 +400,7 @@
     AOS.init({ duration: 400, once: true, offset: 120 });
   </script>
   
+ 
 </body>
 
 </html>

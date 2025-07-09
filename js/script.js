@@ -151,4 +151,25 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 
 
+  // Highlight the correct bottom nav link based on current page
+  document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.bottom-nav-link');
+    const path = window.location.pathname.split('/').pop();
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (
+        (path === '' || path === 'index.html') && link.getAttribute('href').includes('index.html')
+      ) {
+        link.classList.add('active');
+      } else if (
+        path === 'listings.html' && link.getAttribute('href').includes('listings.html')
+      ) {
+        link.classList.add('active');
+      }
+      // You can add more else ifs for other pages as needed
+    });
+  });
+
+
+
   
