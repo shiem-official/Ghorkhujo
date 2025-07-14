@@ -241,11 +241,14 @@ body {
   box-shadow: var(--shadow);
   transition: box-shadow 0.18s, transform 0.18s;
   overflow: hidden;
-  cursor: pointer;
 }
+/* Remove hover transform for .listing-card (details page) */
 .listing-card:hover {
   box-shadow: 0 12px 36px rgba(20,168,0,0.14);
-  transform: translateY(-4px) scale(1.02);
+   transform: translateY(-4px) scale(1.02);
+}
+.listing-card:active {
+  /* Remove transform: scale(0.97); */
 }
 .listing-img {
   height: 220px;
@@ -330,9 +333,11 @@ body {
 .btn, .quick-action-card, .listing-card, .why-card, .review-card {
   transition: box-shadow 0.18s, transform 0.18s, background 0.18s, color 0.18s;
 }
-.btn:active, .quick-action-card:active, .listing-card:active, .why-card:active, .review-card:active {
+/* Remove active transform for .listing-card in microinteractions */
+.btn:active, .quick-action-card:active, .why-card:active, .review-card:active {
   transform: scale(0.97);
 }
+/* Do NOT apply transform to .listing-card:active */
 
 /* Responsive Tweaks */
 @media (max-width: 767.98px) {
@@ -723,3 +728,41 @@ body {
   }
 }
 
+/* Responsive fix for owner contact buttons on mobile */
+@media (max-width: 575.98px) {
+  .owner-contact-group {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    align-items: stretch !important;
+  }
+  .owner-contact-group .btn {
+    width: 100%;
+    margin: 0 !important;
+  }
+}
+
+/* Centered Header Menu Styles */
+.center-header-menu {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.center-header-menu .nav-link {
+  color: #222;
+  font-weight: 500;
+  font-size: 1.08rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1.5rem;
+  transition: color 0.18s, background 0.18s;
+}
+.center-header-menu .nav-link:hover,
+.center-header-menu .nav-link:focus {
+  color: #14a800;
+  background: #f8f9fa;
+  text-decoration: none;
+}
+
+.center-header-menu .nav-link.active{
+  color: #14a800;
+  background: #f8f9fa;
+}

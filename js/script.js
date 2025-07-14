@@ -171,5 +171,19 @@ window.addEventListener('DOMContentLoaded', function() {
   });
 
 
+  // Preload gallery images for instant swap
+  document.addEventListener('DOMContentLoaded', function() {
+    const galleryImages = [
+      'images/home.png',
+      'images/postrent.jpg',
+      'images/rent.jpg'
+    ];
+    galleryImages.forEach(src => {
+      const img = new Image();
+      img.src = src;
+    });
+  });
+
+
 
   
