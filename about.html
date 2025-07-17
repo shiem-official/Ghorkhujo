@@ -12,13 +12,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-
-  <style>
-    .btn[style*='#14a800']:hover, .btn[style*='#14a800']:focus {
-      background: #0e7c00 !important;
-      color: #fff !important;
-    }
-  </style>
 </head>
 
 <body>
@@ -42,10 +35,10 @@
       </a>
       <!-- Centered Menu: Desktop/Tablet Only -->
       <nav class="center-header-menu d-none d-md-flex gap-4 mx-auto" style="font-weight: 500;">
-        <a href="index.html" class="nav-link px-2 active">Home</a>
+        <a href="index.html" class="nav-link px-2">Home</a>
         <a href="listings.html" class="nav-link px-2">Find</a>
         <a href="post-rental.html" class="nav-link px-2">Post</a>
-        <a href="about.html" class="nav-link px-2">About</a>
+        <a href="about.html" class="nav-link px-2 active">About</a>
         <a href="favourites.html" class="nav-link px-2">Favourites</a>
       </nav>
       <div class="d-none d-md-flex gap-2">
@@ -78,50 +71,150 @@
   </aside>
   <div id="drawerBackdrop" class="drawer-backdrop"></div>
 
-  <!-- signup form -->
+  <!-- About Hero Section -->
+  <section class="about-hero-section py-5 text-center bg-white">
+    <div class="container">
+      <h1 class="fw-bold mb-3" style="color: #14a800;">About GhorKhujo</h1>
+      <p class="lead mb-4">Making home rental easy, safe, and accessible for everyone in Bangladesh.</p>
+    </div>
+  </section>
 
-  <div class="container d-flex justify-content-center align-items-center">
-    <div class="col-md-6 col-lg-5">
-      <div class="card p-4 border-0 shadow-sm" style="max-width: 400px; margin: 2rem auto; border-radius: 1.25rem;">
-        <div class="mb-4 text-center">
-          <div class="fw-semibold text-muted" style="font-size: 1.05rem;">Start your journey</div>
-          <h2 class="fw-bold mb-0" style="font-size: 1.6rem; color: #14a800;">Sign Up to GhorKhujo</h2>
+  <!-- Our Story Section -->
+  <section class="container py-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2 class="fw-semibold mb-3">Our Story</h2>
+        <p class="text-muted">GhorKhujo was founded with a simple mission: to make finding and posting rental properties in Bangladesh effortless and trustworthy. We saw the challenges renters and owners faced—fake listings, lack of transparency, and endless searching. Our platform brings verified listings, modern technology, and real support to help you find your next home or tenant with confidence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Values Section -->
+  <section class="container py-4">
+    <h2 class="fw-semibold mb-4 text-center">Our Values</h2>
+    <div class="row g-4 justify-content-center text-center">
+      <div class="col-6 col-md-3">
+        <div class="value-card p-4 rounded-4 shadow-sm h-100">
+          <i class="fa fa-check-circle fa-2x text-success mb-2"></i>
+          <h6 class="fw-semibold mb-2">Trust</h6>
+          <p class="small text-muted mb-0">Verified listings and secure transactions.</p>
         </div>
-        <form autocomplete="off">
-          <div class="mb-3">
-            <input type="text" class="form-control form-control-lg" id="fullName" placeholder="Your name">
-          </div>
-          <div class="mb-3">
-            <input type="email" class="form-control form-control-lg" id="emailAddress" placeholder="Email address">
-          </div>
-          <div class="mb-1 position-relative">
-            <input type="password" class="form-control form-control-lg" id="passwordField" placeholder="Password">
-            <span class="position-absolute top-50 end-0 translate-middle-y pe-3" style="cursor:pointer;" onclick="togglePassword()">
-              <i class="fa fa-eye" id="togglePasswordIcon"></i>
-            </span>
-          </div>
-          <!-- <div class="mb-3 text-end">
-            <a href="#" class="small text-decoration-none" style="color: #14a800;">Forgot password?</a>
-          </div> -->
-          <div class="d-grid mb-3 mt-3">
-            <button type="submit" class="btn btn-lg rounded-2 fw-semibold" style="background: #14a800; color: #fff; border: none;">Sign up</button>
-          </div>
-          <div class="text-center text-secondary mb-3" style="font-size: 0.95rem;">---------- or sign up with ----------</div>
-          <div class="d-flex justify-content-center gap-3 mb-3">
-            <button type="button" class="btn btn-light border rounded-2 px-3 py-2" style="box-shadow: none;">
-              <img src="https://img.icons8.com/color/32/000000/google-logo.png" alt="Google logo" style="height: 24px; width: 24px;" />
-            </button>
-            <button type="button" class="btn btn-light border rounded-2 px-3 py-2" style="box-shadow: none;">
-              <img src="https://img.icons8.com/ios-filled/32/000000/mac-os.png" alt="Apple logo" style="height: 24px; width: 24px;" />
-            </button>
-          </div>
-        </form>
-        <div class="text-center mt-2" style="font-size: 0.97rem;">
-          Have an account? <a href="signin.html" class="fw-semibold text-decoration-none" style="color: #14a800;">Sign In</a>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="value-card p-4 rounded-4 shadow-sm h-100">
+          <i class="fa fa-users fa-2x text-primary mb-2"></i>
+          <h6 class="fw-semibold mb-2">Community</h6>
+          <p class="small text-muted mb-0">Connecting renters and owners across Bangladesh.</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="value-card p-4 rounded-4 shadow-sm h-100">
+          <i class="fa fa-headset fa-2x text-warning mb-2"></i>
+          <h6 class="fw-semibold mb-2">Support</h6>
+          <p class="small text-muted mb-0">24/7 help for all users, every step of the way.</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="value-card p-4 rounded-4 shadow-sm h-100">
+          <i class="fa fa-bolt fa-2x text-danger mb-2"></i>
+          <h6 class="fw-semibold mb-2">Innovation</h6>
+          <p class="small text-muted mb-0">Modern tools for a seamless rental experience.</p>
         </div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Stats/Achievements Section -->
+  <section class="container py-4">
+    <h2 class="fw-semibold mb-4 text-center">Our Achievements</h2>
+    <div class="row g-4 justify-content-center text-center">
+      <div class="col-6 col-md-3">
+        <div class="stat-card p-4 rounded-4 shadow-sm h-100">
+          <div class="stat-number" style="font-size:2rem; color:#14a800;">10,000+</div>
+          <div class="stat-label">Happy Users</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card p-4 rounded-4 shadow-sm h-100">
+          <div class="stat-number" style="font-size:2rem; color:#14a800;">2,500+</div>
+          <div class="stat-label">Verified Listings</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card p-4 rounded-4 shadow-sm h-100">
+          <div class="stat-number" style="font-size:2rem; color:#14a800;">20+</div>
+          <div class="stat-label">Cities Covered</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card p-4 rounded-4 shadow-sm h-100">
+          <div class="stat-number" style="font-size:2rem; color:#14a800;">24/7</div>
+          <div class="stat-label">Support</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet the Team Section (Optional) -->
+  <section class="container py-4">
+    <h2 class="fw-semibold mb-4 text-center">Meet the Team</h2>
+    <div class="row g-4 justify-content-center text-center">
+      <div class="col-6 col-md-3">
+        <div class="team-card p-4 rounded-4 shadow-sm h-100">
+          <img src="images/siam.jpeg" class="rounded-circle mb-2" width="72" height="72" alt="Team Member" />
+          <h6 class="fw-semibold mb-1">Siam Rahman</h6>
+          <p class="small text-muted mb-0">Founder & CEO</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="team-card p-4 rounded-4 shadow-sm h-100">
+          <img src="images/siam.jpeg" class="rounded-circle mb-2" width="72" height="72" alt="Team Member" />
+          <h6 class="fw-semibold mb-1">Ayesha Khatun</h6>
+          <p class="small text-muted mb-0">Co-Founder</p>
+        </div>
+      </div>
+      <!-- Add more team members as needed -->
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="container py-4">
+    <h2 class="fw-semibold mb-4 text-center">What Our Users Say</h2>
+    <div class="row g-4 justify-content-center text-center">
+      <div class="col-12 col-md-4">
+        <div class="review-card p-4 rounded-4 shadow-sm h-100">
+          <div class="d-flex align-items-center mb-2 justify-content-center">
+            <img src="images/siam.jpeg" class="rounded-circle me-2" width="48" height="48" alt="User" />
+            <div>
+              <span class="fw-semibold">Ayesha K.</span>
+              <span class="text-warning ms-1"><i class="fa fa-star"></i> 5.0</span>
+            </div>
+          </div>
+          <p class="small mb-0">"I found my dream apartment in just two days! The process was so easy and the listings were all real."</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="review-card p-4 rounded-4 shadow-sm h-100">
+          <div class="d-flex align-items-center mb-2 justify-content-center">
+            <img src="images/siam.jpeg" class="rounded-circle me-2" width="48" height="48" alt="User" />
+            <div>
+              <span class="fw-semibold">Rahim U.</span>
+              <span class="text-warning ms-1"><i class="fa fa-star"></i> 4.8</span>
+            </div>
+          </div>
+          <p class="small mb-0">"Posting my house for rent was super simple. I got great tenants quickly. Highly recommend!"</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="container py-5 text-center">
+    <h2 class="fw-bold mb-3">Ready to get started?</h2>
+    <p class="mb-4">Join thousands of happy users. Find your next home or post your rental today!</p>
+    <a href="listings.html" class="btn btn-success rounded-pill px-5 fw-semibold me-2" style="background: #14a800; border: 2px solid #14a800;">Find a Home</a>
+    <a href="post-rental.html" class="btn btn-outline-success rounded-pill px-5 fw-semibold" style="border: 2px solid #14a800; color: #14a800;">Post Rental</a>
+  </section>
 
   <!-- Footer -->
   <footer class="footer-section bg-dark text-white pt-5 pb-3 mt-5">
@@ -130,7 +223,7 @@
         <div class="col-6 col-md-3 mb-4">
           <h6 class="text-uppercase mb-3 fw-semibold opacity-75">For Renters</h6>
           <ul class="list-unstyled">
-            <li><a href="#" class="footer-link">Find a Home</a></li>
+            <li><a href="listings.html" class="footer-link">Find a Home</a></li>
             <li><a href="#" class="footer-link">Browse Listings</a></li>
             <li><a href="#" class="footer-link">How it Works</a></li>
             <li><a href="#" class="footer-link">FAQs</a></li>
@@ -156,7 +249,7 @@
         <div class="col-6 col-md-3 mb-4">
           <h6 class="text-uppercase mb-3 fw-semibold opacity-75">Company</h6>
           <ul class="list-unstyled">
-            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="#" class="footer-link">About Us</a></li>
             <li><a href="#" class="footer-link">Careers</a></li>
             <li><a href="#" class="footer-link">Trust & Safety</a></li>
             <li><a href="#" class="footer-link">Contact Us</a></li>
@@ -180,10 +273,10 @@
 
   <!-- Bottom Navigation Bar (Mobile) -->
   <nav class="bottom-nav d-md-none">
-    <a href="index.html" class="bottom-nav-link active"><i class="fa fa-home"></i><span>Home</span></a>
+    <a href="index.html" class="bottom-nav-link"><i class="fa fa-home"></i><span>Home</span></a>
     <a href="listings.html" class="bottom-nav-link"><i class="fa fa-search"></i><span>Find</span></a>
     <a href="post-rental.html" class="bottom-nav-link post-btn"><i class="fa fa-plus-circle"></i><span>Post</span></a>
-    <a href="favourites.html" class="bottom-nav-link"><i class="fa fa-heart"></i><span>Favs</span></a>
+    <a href="favourites.html" class="bottom-nav-link active"><i class="fa fa-heart"></i><span>Favs</span></a>
     <a href="#" class="bottom-nav-link"><i class="fa fa-user"></i><span>Profile</span></a>
   </nav>
 
@@ -191,21 +284,6 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    function togglePassword() {
-      const passwordField = document.getElementById("passwordField");
-      const icon = document.getElementById("togglePasswordIcon");
-      if (passwordField.type === "password") {
-        passwordField.type = "text";
-        icon.classList.remove("fa-eye");
-        icon.classList.add("fa-eye-slash");
-      } else {
-        passwordField.type = "password";
-        icon.classList.remove("fa-eye-slash");
-        icon.classList.add("fa-eye");
-      }
-    }
-  </script>
 </body>
 
 </html>

@@ -165,6 +165,14 @@ window.addEventListener('DOMContentLoaded', function() {
         path === 'listings.html' && link.getAttribute('href').includes('listings.html')
       ) {
         link.classList.add('active');
+      } else if (
+        (path === 'favourites.html' || path === 'favorites.html') && link.getAttribute('href').includes('favourites.html')
+      ) {
+        link.classList.add('active');
+      } else if (
+        (path === 'profile.html' || path === 'profile.html') && link.getAttribute('href').includes('profile.html')
+      ) {
+        link.classList.add('active');
       }
       // You can add more else ifs for other pages as needed
     });
