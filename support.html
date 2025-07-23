@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support | GhorKhojo</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <style>
+    .support-hero {
+      background: linear-gradient(90deg, #e6f9ed 0%, #fff 100%);
+      padding: 2.5rem 0 1.5rem 0;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .accordion-button:not(.collapsed) {
+      color: #14a800;
+      background-color: #e6f9ed;
+      font-weight: 600;
+    }
+    .accordion-button {
+      font-weight: 500;
+      border-radius: 0.75rem;
+    }
+    .accordion-item {
+      border-radius: 0.75rem;
+      margin-bottom: 1rem;
+      border: none;
+      box-shadow: 0 2px 8px rgba(20,168,0,0.07);
+    }
+    .support-form-card {
+      border-radius: 1.25rem;
+      box-shadow: 0 2px 16px rgba(20,168,0,0.07);
+    }
+  </style>
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="ghorkhujo-loader">
+      <div class="loader-house">
+        <div class="roof"></div>
+        <div class="walls"></div>
+        <div class="door"></div>
+        <div class="loader-bounce"></div>
+      </div>
+      <div class="loader-text">Finding Your Home...</div>
+    </div>
+
+  <!-- Sticky Header -->
+  <header class="modern-header sticky-top shadow-sm">
+    <div class="container-fluid d-flex align-items-center justify-content-between py-2 px-3">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <span class="fw-bold fs-4" style="color: #14a800;">GhorKhojo</span>
+      </a>
+      <!-- Centered Menu: Desktop/Tablet Only -->
+      <nav class="center-header-menu d-none d-md-flex gap-4 mx-auto" style="font-weight: 500;">
+        <a href="index.html" class="nav-link px-2">Home</a>
+        <a href="listings.html" class="nav-link px-2">Find</a>
+        <a href="post-rental.html" class="nav-link px-2">Post</a>
+        <a href="about.html" class="nav-link px-2">About</a>
+        <a href="favourites.html" class="nav-link px-2">Favourites</a>
+      </nav>
+      <div class="d-none d-md-flex gap-2">
+        <a href="signin.html" class="btn rounded-pill px-4 fw-semibold" id="findHomeBtn" style="text-decoration: none; color: #14a800; border: 2px solid #14a800; background: #fff;">Sign in</a>
+        <a href="signup.html" class="btn rounded-pill px-4 fw-semibold" id="postRentalBtn" style="text-decoration: none; color: #fff; background: #14a800; border: 2px solid #14a800;">Sign up</a>
+      </div>
+      <button class="btn btn-link d-md-none fs-2 text-dark" id="drawerToggle"><i class="fa fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- Drawer Menu -->
+  <aside id="drawerMenu" class="drawer-menu">
+    <div class="drawer-header d-flex align-items-center justify-content-between px-3 py-3">
+      <span class="fw-bold fs-5">Menu</span>
+      <button class="btn btn-link fs-3 text-dark" id="drawerClose"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="drawer-auth-buttons px-3 pb-3 d-flex gap-2 flex-column">
+      <a href="signin.html" class="btn rounded-pill fw-semibold" style="min-width: 100px; text-decoration: none; color: #14a800; border: 2px solid #14a800; background: #fff;" id="drawerSignIn">Sign In</a>
+      <a href="signup.html" class="btn rounded-pill fw-semibold" style="min-width: 100px; text-decoration: none; color: #fff; background: #14a800; border: 2px solid #14a800;" id="drawerSignUp">Sign Up</a>
+    </div>
+    <ul class="list-unstyled px-3">
+      <li><a href="index.html" class="drawer-link"><i class="fa fa-home me-2"></i>Home</a></li>
+      <li><a href="listings.html" class="drawer-link"><i class="fa fa-search me-2"></i>Find Home</a></li>
+      <li><a href="post-rental.html" class="drawer-link"><i class="fa fa-plus-circle me-2"></i>Post Rental</a></li>
+      <li><a href="profile.html" class="drawer-link"><i class="fa fa-user me-2"></i>Profile</a></li>
+      <li><a href="favourites.html" class="drawer-link"><i class="fa fa-heart me-2"></i>Favorites</a></li>
+      <li><a href="about.html" class="drawer-link"><i class="fa fa-info-circle me-2"></i>About</a></li>
+      <li><a href="contact.html" class="drawer-link"><i class="fa fa-envelope me-2"></i>Contact</a></li>
+    </ul>
+  </aside>
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+
+
+  <!-- Hero Section -->
+  <section class="support-hero">
+    <h1 class="fw-bold mb-2">Help Center & Support</h1>
+    <p class="lead mb-0">Find answers to common questions or reach out to our support team for help.</p>
+  </section>
+  <main class="container pb-5">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8">
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq1">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                How do I post a rental property?
+              </button>
+            </h2>
+            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Go to the Post Rental page, fill in the property details, and submit the form.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                How do I save a property to favorites?
+              </button>
+            </h2>
+            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Click the heart icon on any listing to add it to your favorites.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                How do I contact the property owner?
+              </button>
+            </h2>
+            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Use the contact form on the listing details page or the contact information provided.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="card shadow support-form-card p-4">
+          <h5 class="fw-semibold mb-3">Contact Support</h5>
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Your Email</label>
+              <input type="email" class="form-control rounded-pill" placeholder="Enter your email" required />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Message</label>
+              <textarea class="form-control rounded-4" rows="3" placeholder="Describe your issue..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success rounded-pill px-4 fw-semibold">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class="footer-section bg-dark text-white pt-5 pb-3 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-md-3 mb-4">
+          <h6 class="text-uppercase mb-3 fw-semibold opacity-75">For Renters</h6>
+          <ul class="list-unstyled">
+            <li><a href="listings.html" class="footer-link">Find a Home</a></li>
+            <li><a href="listings.html" class="footer-link">Browse Listings</a></li>
+            <li><a href="#" class="footer-link">How it Works</a></li>
+            <li><a href="#" class="footer-link">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <h6 class="text-uppercase mb-3 fw-semibold opacity-75">For Owners</h6>
+          <ul class="list-unstyled">
+            <li><a href="post-rental.html" class="footer-link">Post Rental</a></li>
+            <li><a href="#" class="footer-link">Owner Dashboard</a></li>
+            <li><a href="#" class="footer-link">Support</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <h6 class="text-uppercase mb-3 fw-semibold opacity-75">Resources</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="footer-link">Help Center</a></li>
+            <li><a href="#" class="footer-link">Blog</a></li>
+            <li><a href="#" class="footer-link">Guides</a></li>
+            <li><a href="#" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <h6 class="text-uppercase mb-3 fw-semibold opacity-75">Company</h6>
+          <ul class="list-unstyled">
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="#" class="footer-link">Careers</a></li>
+            <li><a href="#" class="footer-link">Trust & Safety</a></li>
+            <li><a href="#" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-3" />
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0 pb-3">
+          <span class="small">&copy; 2024 GhorKhojo. All rights reserved.</span>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="#" class="footer-social mx-2"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="footer-social mx-2"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="footer-social mx-2"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="footer-social mx-2"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Bottom Navigation Bar (Mobile) -->
+  <nav class="bottom-nav d-md-none">
+    <a href="index.html" class="bottom-nav-link"><i class="fa fa-home"></i><span>Home</span></a>
+    <a href="listings.html" class="bottom-nav-link"><i class="fa fa-search"></i><span>Find</span></a>
+    <a href="post-rental.html" class="bottom-nav-link post-btn"><i class="fa fa-plus-circle"></i><span>Post</span></a>
+    <a href="favourites.html" class="bottom-nav-link"><i class="fa fa-heart"></i><span>Favs</span></a>
+    <a href="profile.html" class="bottom-nav-link"><i class="fa fa-user"></i><span>Profile</span></a>
+  </nav>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html> 

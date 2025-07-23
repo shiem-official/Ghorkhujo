@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Owner Dashboard | GhorKhojo</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+<body>
+  <header class="modern-header sticky-top shadow-sm">
+    <div class="container-fluid d-flex align-items-center justify-content-between py-2 px-3">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <span class="fw-bold fs-4" style="color: #14a800;">GhorKhojo</span>
+      </a>
+    </div>
+  </header>
+  <main class="container py-5">
+    <h2 class="fw-bold mb-4 text-center">Owner Dashboard</h2>
+    <div class="row g-4 mb-4 justify-content-center">
+      <div class="col-6 col-md-3">
+        <div class="stat-card p-4 rounded-4 shadow-sm h-100 text-center">
+          <i class="fa fa-home fa-2x text-success mb-2"></i>
+          <div class="stat-number">2</div>
+          <div class="stat-label">My Properties</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card p-4 rounded-4 shadow-sm h-100 text-center">
+          <i class="fa fa-users fa-2x text-primary mb-2"></i>
+          <div class="stat-number">5</div>
+          <div class="stat-label">Interested Tenants</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card p-4 rounded-4 shadow-sm h-100 text-center">
+          <i class="fa fa-check-circle fa-2x text-warning mb-2"></i>
+          <div class="stat-number">1</div>
+          <div class="stat-label">Rented Out</div>
+        </div>
+      </div>
+    </div>
+    <div class="card shadow rounded-4 p-4 mb-4">
+      <h5 class="fw-semibold mb-3">My Posted Properties</h5>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="listing-card rounded-4 shadow-sm overflow-hidden">
+            <img src="images/rent.jpg" class="w-100 listing-img" alt="Posted Home" />
+            <div class="p-3">
+              <h6 class="fw-semibold mb-1">Modern Apartment in Dhaka</h6>
+              <p class="small text-muted mb-2">Uttara, Dhaka</p>
+              <span class="fw-bold text-success">৳ 25,000/mo</span>
+              <div class="mt-2">
+                <button class="btn btn-outline-primary btn-sm rounded-pill me-2">Edit</button>
+                <button class="btn btn-outline-danger btn-sm rounded-pill">Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="listing-card rounded-4 shadow-sm overflow-hidden">
+            <img src="images/postrent.jpg" class="w-100 listing-img" alt="Posted Home" />
+            <div class="p-3">
+              <h6 class="fw-semibold mb-1">Family House in Mirpur</h6>
+              <p class="small text-muted mb-2">Mirpur, Dhaka</p>
+              <span class="fw-bold text-success">৳ 40,000/mo</span>
+              <div class="mt-2">
+                <button class="btn btn-outline-primary btn-sm rounded-pill me-2">Edit</button>
+                <button class="btn btn-outline-danger btn-sm rounded-pill">Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-end">
+      <a href="post-rental.html" class="btn btn-success rounded-pill px-4 fw-semibold">Post New Property</a>
+    </div>
+  </main>
+</body>
+</html> 

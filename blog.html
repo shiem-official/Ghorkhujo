@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GhorKhojo</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <style>
+    .blog-hero {
+      background: linear-gradient(90deg, #e6f9ed 0%, #fff 100%);
+      padding: 2.5rem 0 1.5rem 0;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .blog-card {
+      border-radius: 1.25rem;
+      box-shadow: 0 2px 16px rgba(20,168,0,0.07);
+      transition: box-shadow 0.2s;
+      height: 100%;
+    }
+    .blog-card:hover {
+      box-shadow: 0 4px 24px rgba(20,168,0,0.13);
+    }
+    .blog-img {
+      border-radius: 1.25rem 1.25rem 0 0;
+      object-fit: cover;
+      width: 100%;
+      height: 180px;
+    }
+    .blog-sidebar {
+      position: sticky;
+      top: 90px;
+    }
+    .blog-category {
+      color: #14a800;
+      font-weight: 500;
+      text-decoration: none;
+      margin-right: 0.5rem;
+    }
+    .blog-category:hover { text-decoration: underline; }
+    .recent-post-link { color: #222; text-decoration: none; }
+    .recent-post-link:hover { color: #14a800; text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <!-- Loader -->
+  <div id="ghorkhujo-loader">
+    <div class="loader-house">
+      <div class="roof"></div>
+      <div class="walls"></div>
+      <div class="door"></div>
+      <div class="loader-bounce"></div>
+    </div>
+    <div class="loader-text">Finding Your Home...</div>
+  </div>
+  <!-- Sticky Header -->
+  <header class="modern-header sticky-top shadow-sm">
+    <div class="container-fluid d-flex align-items-center justify-content-between py-2 px-3">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <!-- <img src="images/ghorkhujo2.png" alt="Logo" height="44" /> -->
+        <span class="fw-bold fs-4" style="color: #14a800;">GhorKhojo</span>
+      </a>
+      <!-- Centered Menu: Desktop/Tablet Only -->
+      <nav class="center-header-menu d-none d-md-flex gap-4 mx-auto" style="font-weight: 500;">
+        <a href="index.html" class="nav-link px-2 active">Home</a>
+        <a href="listings.html" class="nav-link px-2">Find</a>
+        <a href="post-rental.html" class="nav-link px-2">Post</a>
+        <a href="about.html" class="nav-link px-2">About</a>
+        <a href="favourites.html" class="nav-link px-2">Favourites</a>
+        <a href="blog.html" class="nav-link px-2">Blog</a>
+      </nav>
+      <div class="d-none d-md-flex gap-2">
+        <a href="signin.html" class="btn rounded-pill px-4 fw-semibold" id="findHomeBtn" style="text-decoration: none; color: #14a800; border: 2px solid #14a800; background: #fff;">Sign in</a>
+        <a href="signup.html" class="btn rounded-pill px-4 fw-semibold" id="postRentalBtn" style="text-decoration: none; color: #fff; background: #14a800; border: 2px solid #14a800;">Sign up</a>
+      </div>
+      <button class="btn btn-link d-md-none fs-2 text-dark" id="drawerToggle"><i class="fa fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- Drawer Menu -->
+  <aside id="drawerMenu" class="drawer-menu">
+    <div class="drawer-header d-flex align-items-center justify-content-between px-3 py-3">
+      <span class="fw-bold fs-5">Menu</span>
+      <button class="btn btn-link fs-3 text-dark" id="drawerClose"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="drawer-auth-buttons px-3 pb-3 d-flex gap-2 flex-column">
+      <a href="signin.html" class="btn rounded-pill fw-semibold" style="min-width: 100px; text-decoration: none; color: #14a800; border: 2px solid #14a800; background: #fff;" id="drawerSignIn">Sign In</a>
+      <a href="signup.html" class="btn rounded-pill fw-semibold" style="min-width: 100px; text-decoration: none; color: #fff; background: #14a800; border: 2px solid #14a800;" id="drawerSignUp">Sign Up</a>
+    </div>
+    <ul class="list-unstyled px-3">
+      <li><a href="index.html" class="drawer-link"><i class="fa fa-home me-2"></i>Home</a></li>
+      <li><a href="listings.html" class="drawer-link"><i class="fa fa-search me-2"></i>Find Home</a></li>
+      <li><a href="post-rental.html" class="drawer-link"><i class="fa fa-plus-circle me-2"></i>Post Rental</a></li>
+      <li><a href="profile.html" class="drawer-link"><i class="fa fa-user me-2"></i>Profile</a></li>
+      <li><a href="favourites.html" class="drawer-link"><i class="fa fa-heart me-2"></i>Favorites</a></li>
+      <li><a href="blog.html" class="drawer-link"><i class="fa fa-newspaper me-2"></i>Blog</a></li>
+      <li><a href="about.html" class="drawer-link"><i class="fa fa-info-circle me-2"></i>About</a></li>
+      <li><a href="contact.html" class="drawer-link"><i class="fa fa-envelope me-2"></i>Contact</a></li>
+    </ul>
+  </aside>
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+  <!-- Hero Section -->
+  <section class="blog-hero">
+    <h1 class="fw-bold mb-2">GhorKhojo Blog & Guides</h1>
+    <p class="lead mb-0">Tips, stories, and resources for renters and property owners in Bangladesh.</p>
+  </section>
+  <main class="container pb-5">
+    <div class="row g-4">
+      <!-- Blog Articles -->
+      <div class="col-lg-8">
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-6">
+            <div class="card blog-card h-100">
+              <img src="images/rent.jpg" class="blog-img" alt="Blog 1" />
+              <div class="card-body">
+                <a href="#" class="blog-category">Tips</a>
+                <h5 class="fw-semibold mb-2">How to Find the Perfect Rental in Dhaka</h5>
+                <p class="text-muted mb-3">Tips and tricks for finding your dream home in the city, from budgeting to location selection.</p>
+                <a href="#" class="btn btn-outline-success rounded-pill">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6">
+            <div class="card blog-card h-100">
+              <img src="images/postrent.jpg" class="blog-img" alt="Blog 2" />
+              <div class="card-body">
+                <a href="#" class="blog-category">Owner Guide</a>
+                <h5 class="fw-semibold mb-2">A Landlord's Guide to Listing Properties</h5>
+                <p class="text-muted mb-3">Step-by-step guide for property owners to list and manage their rentals effectively.</p>
+                <a href="#" class="btn btn-outline-success rounded-pill">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6">
+            <div class="card blog-card h-100">
+              <img src="images/home.png" class="blog-img" alt="Blog 3" />
+              <div class="card-body">
+                <a href="#" class="blog-category">Legal</a>
+                <h5 class="fw-semibold mb-2">Understanding Rental Agreements</h5>
+                <p class="text-muted mb-3">Learn about the key clauses and what to look for before signing a rental contract.</p>
+                <a href="#" class="btn btn-outline-success rounded-pill">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6">
+            <div class="card blog-card h-100">
+              <img src="images/siam.jpeg" class="blog-img" alt="Blog 4" />
+              <div class="card-body">
+                <a href="#" class="blog-category">Stories</a>
+                <h5 class="fw-semibold mb-2">Tenant Success Stories</h5>
+                <p class="text-muted mb-3">Real stories from renters who found their perfect home using GhorKhojo.</p>
+                <a href="#" class="btn btn-outline-success rounded-pill">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Sidebar -->
+      <div class="col-lg-4">
+        <div class="blog-sidebar mb-4">
+          <div class="card shadow-sm rounded-4 mb-4">
+            <div class="card-body">
+              <h6 class="fw-semibold mb-3">Categories</h6>
+              <a href="#" class="blog-category">Tips</a>
+              <a href="#" class="blog-category">Owner Guide</a>
+              <a href="#" class="blog-category">Legal</a>
+              <a href="#" class="blog-category">Stories</a>
+            </div>
+          </div>
+          <div class="card shadow-sm rounded-4">
+            <div class="card-body">
+              <h6 class="fw-semibold mb-3">Recent Posts</h6>
+              <a href="#" class="recent-post-link d-block mb-2">How to Find the Perfect Rental in Dhaka</a>
+              <a href="#" class="recent-post-link d-block mb-2">A Landlord's Guide to Listing Properties</a>
+              <a href="#" class="recent-post-link d-block mb-2">Understanding Rental Agreements</a>
+              <a href="#" class="recent-post-link d-block">Tenant Success Stories</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class="footer-section bg-dark text-white pt-5 pb-3 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-md-3 mb-4">
+          <h6 class="text-uppercase mb-3 fw-semibold opacity-75">For Renters</h6>
+          <ul class="list-unstyled">
+            <li><a href="listings.html" class="footer-link">Find a Home</a></li>
+            <li><a href="listings.html" class="footer-link">Browse Listings</a></li>
+            <li><a href="#" class="footer-link">How it Works</a></li>
+            <li><a href="#" class="footer-link">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <h6 class="text-uppercase mb-3 fw-semibold opacity-75">For Owners</h6>
+          <ul class="list-unstyled">
+            <li><a href="post-rental.html" class="footer-link">Post Rental</a></li>
+            <li><a href="#" class="footer-link">Owner Dashboard</a></li>
+            <li><a href="#" class="footer-link">Support</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <h6 class="text-uppercase mb-3 fw-semibold opacity-75">Resources</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="footer-link">Help Center</a></li>
+            <li><a href="#" class="footer-link">Blog</a></li>
+            <li><a href="#" class="footer-link">Guides</a></li>
+            <li><a href="#" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 mb-4">
+          <h6 class="text-uppercase mb-3 fw-semibold opacity-75">Company</h6>
+          <ul class="list-unstyled">
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="#" class="footer-link">Careers</a></li>
+            <li><a href="#" class="footer-link">Trust & Safety</a></li>
+            <li><a href="#" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-3" />
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0 pb-3">
+          <span class="small">&copy; 2024 GhorKhojo. All rights reserved.</span>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="#" class="footer-social mx-2"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="footer-social mx-2"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="footer-social mx-2"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="footer-social mx-2"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Bottom Navigation Bar (Mobile) -->
+  <nav class="bottom-nav d-md-none">
+    <a href="index.html" class="bottom-nav-link"><i class="fa fa-home"></i><span>Home</span></a>
+    <a href="listings.html" class="bottom-nav-link"><i class="fa fa-search"></i><span>Find</span></a>
+    <a href="post-rental.html" class="bottom-nav-link post-btn"><i class="fa fa-plus-circle"></i><span>Post</span></a>
+    <a href="favourites.html" class="bottom-nav-link"><i class="fa fa-heart"></i><span>Favs</span></a>
+    <a href="profile.html" class="bottom-nav-link"><i class="fa fa-user"></i><span>Profile</span></a>
+  </nav>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html> 

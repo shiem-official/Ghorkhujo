@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GhorKhojo</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <style>
+    .star-rating { direction: rtl; display: inline-flex; }
+    .star-rating input[type="radio"] { display: none; }
+    .star-rating label { font-size: 1.5rem; color: #ccc; cursor: pointer; }
+    .star-rating input[type="radio"]:checked ~ label { color: #ffc107; }
+    .star-rating label:hover, .star-rating label:hover ~ label { color: #ffc107; }
+    .review-carousel .carousel-item { min-height: 180px; }
+    .top-contributors img { border: 2px solid #14a800; }
+    a{
+      text-decoration: none;
+    }
+    /* Custom color for nav-pills active tab */
+    .nav-pills .nav-link.active, 
+    .nav-pills .show > .nav-link {
+      background-color: #14a800 !important;
+      color: #fff !important;
+      border-radius: 50px;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(20,168,0,0.08);
+    }
+    .nav-pills .nav-link {
+      color: #14a800;
+      border-radius: 50px;
+      font-weight: 500;
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-pills .nav-link:hover, 
+    .nav-pills .nav-link:focus {
+      background-color: #e6f9ed;
+      color: #14a800;
+    }
+  </style>
+</head>
+<body>
+
+
+  <!-- Loader -->
+  <div id="ghorkhujo-loader">
+    <div class="loader-house">
+      <div class="roof"></div>
+      <div class="walls"></div>
+      <div class="door"></div>
+      <div class="loader-bounce"></div>
+    </div>
+    <div class="loader-text">Finding Your Home...</div>
+  </div>
+
+  <!-- Sticky Header -->
+  <header class="modern-header sticky-top shadow-sm">
+    <div class="container-fluid d-flex align-items-center justify-content-between py-2 px-3">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <!-- <img src="images/ghorkhujo2.png" alt="Logo" height="44" /> -->
+        <span class="fw-bold fs-4" style="color: #14a800;">GhorKhojo</span>
+      </a>
+      <!-- Centered Menu: Desktop/Tablet Only -->
+      <nav class="center-header-menu d-none d-md-flex gap-4 mx-auto" style="font-weight: 500;">
+        <a href="index.html" class="nav-link px-2 active">Home</a>
+        <a href="listings.html" class="nav-link px-2">Find</a>
+        <a href="post-rental.html" class="nav-link px-2">Post</a>
+        <a href="about.html" class="nav-link px-2">About</a>
+        <a href="favourites.html" class="nav-link px-2">Favourites</a>
+      </nav>
+      <div class="d-none d-md-flex gap-2">
+        <a href="signin.html" class="btn rounded-pill px-4 fw-semibold" id="findHomeBtn" style="text-decoration: none; color: #14a800; border: 2px solid #14a800; background: #fff;">Sign in</a>
+        <a href="signup.html" class="btn rounded-pill px-4 fw-semibold" id="postRentalBtn" style="text-decoration: none; color: #fff; background: #14a800; border: 2px solid #14a800;">Sign up</a>
+      </div>
+      <button class="btn btn-link d-md-none fs-2 text-dark" id="drawerToggle"><i class="fa fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- Drawer Menu -->
+  <aside id="drawerMenu" class="drawer-menu">
+    <div class="drawer-header d-flex align-items-center justify-content-between px-3 py-3">
+      <span class="fw-bold fs-5">Menu</span>
+      <button class="btn btn-link fs-3 text-dark" id="drawerClose"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="drawer-auth-buttons px-3 pb-3 d-flex gap-2 flex-column">
+      <a href="signin.html" class="btn rounded-pill fw-semibold" style="min-width: 100px; text-decoration: none; color: #14a800; border: 2px solid #14a800; background: #fff;" id="drawerSignIn">Sign In</a>
+      <a href="signup.html" class="btn rounded-pill fw-semibold" style="min-width: 100px; text-decoration: none; color: #fff; background: #14a800; border: 2px solid #14a800;" id="drawerSignUp">Sign Up</a>
+    </div>
+    <ul class="list-unstyled px-3">
+      <li><a href="index.html" class="drawer-link"><i class="fa fa-home me-2"></i>Home</a></li>
+      <li><a href="listings.html" class="drawer-link"><i class="fa fa-search me-2"></i>Find Home</a></li>
+      <li><a href="post-rental.html" class="drawer-link"><i class="fa fa-plus-circle me-2"></i>Post Rental</a></li>
+      <li><a href="#" class="drawer-link"><i class="fa fa-user me-2"></i>Profile</a></li>
+      <li><a href="favourites.html" class="drawer-link"><i class="fa fa-heart me-2"></i>Favorites</a></li>
+      <li><a href="about.html" class="drawer-link"><i class="fa fa-info-circle me-2"></i>About</a></li>
+      <li><a href="#" class="drawer-link"><i class="fa fa-envelope me-2"></i>Contact</a></li>
+    </ul>
+  </aside>
+  <div id="drawerBackdrop" class="drawer-backdrop"></div>
+  <!-- Hero Section -->
+  <section class="py-5 bg-light text-center mb-4">
+    <div class="container">
+      <h1 class="fw-bold mb-2">GhorKhojo Community</h1>
+      <p class="lead mb-0">Share your experiences, read reviews, and connect with fellow renters and owners!</p>
+    </div>
+  </section>
+  <main class="container pb-5">
+    <!-- Filter Tabs -->
+    <ul class="nav nav-pills justify-content-center mb-4" id="feedTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab">All</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="reviews-tab" data-bs-toggle="pill" data-bs-target="#reviews" type="button" role="tab">Reviews</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="stories-tab" data-bs-toggle="pill" data-bs-target="#stories" type="button" role="tab">Stories</button>
+      </li>
+    </ul>
+    <div class="tab-content" id="feedTabsContent">
+      <!-- All Tab -->
+      <div class="tab-pane fade show active" id="all" role="tabpanel">
+        <div class="row g-4 justify-content-center">
+          <div class="col-12 col-md-6">
+            <div class="card p-4 mb-3 shadow-sm">
+              <div class="d-flex align-items-center mb-2">
+                <img src="images/siam.jpeg" class="rounded-circle me-2" width="48" height="48" alt="User" />
+                <div>
+                  <span class="fw-semibold">Ayesha K.</span>
+                  <span class="text-warning ms-1"><i class="fa fa-star"></i> 5.0</span>
+                </div>
+              </div>
+              <p class="small mb-0">"Just moved into my new apartment thanks to GhorKhojo! Great experience."</p>
+            </div>
+            <div class="card p-4 mb-3 shadow-sm">
+              <div class="d-flex align-items-center mb-2">
+                <img src="images/siam.jpeg" class="rounded-circle me-2" width="48" height="48" alt="User" />
+                <div>
+                  <span class="fw-semibold">Rahim U.</span>
+                  <span class="text-warning ms-1"><i class="fa fa-star"></i> 4.8</span>
+                </div>
+              </div>
+              <p class="small mb-0">"Found great tenants for my house. The platform is super easy to use."</p>
+            </div>
+            <div class="card p-4 mb-3 shadow-sm">
+              <div class="d-flex align-items-center mb-2">
+                <img src="images/siam.jpeg" class="rounded-circle me-2" width="48" height="48" alt="User" />
+                <div>
+                  <span class="fw-semibold">Shila B.</span>
+                  <span class="text-warning ms-1"><i class="fa fa-star"></i> 4.9</span>
+                </div>
+              </div>
+              <p class="small mb-0">"I love the community here. Got so many tips from other renters!"</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="card p-4 shadow-sm mb-3">
+              <h5 class="fw-semibold mb-2">Recent Activity</h5>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-2"><i class="fa fa-user-plus text-success me-2"></i> <b>Shila B.</b> joined the community</li>
+                <li class="mb-2"><i class="fa fa-heart text-danger me-2"></i> <b>Rahim U.</b> favorited a listing</li>
+                <li class="mb-2"><i class="fa fa-home text-primary me-2"></i> <b>Ayesha K.</b> posted a new rental</li>
+              </ul>
+            </div>
+            <!-- Top Contributors -->
+            <div class="card p-4 shadow-sm mb-3 top-contributors">
+              <h5 class="fw-semibold mb-2">Top Contributors</h5>
+              <div class="d-flex align-items-center gap-3">
+                <img src="images/siam.jpeg" class="rounded-circle" width="40" height="40" alt="User" />
+                <div>
+                  <span class="fw-semibold">Ayesha K.</span><br />
+                  <span class="text-muted small">12 reviews</span>
+                </div>
+                <img src="images/siam.jpeg" class="rounded-circle" width="40" height="40" alt="User" />
+                <div>
+                  <span class="fw-semibold">Rahim U.</span><br />
+                  <span class="text-muted small">9 reviews</span>
+                </div>
+              </div>
+            </div>
+            <!-- Review Carousel -->
+            <div id="reviewCarousel" class="carousel slide review-carousel" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="card p-3 shadow-sm">
+                    <div class="d-flex align-items-center mb-2">
+                      <img src="images/siam.jpeg" class="rounded-circle me-2" width="40" height="40" alt="User" />
+                      <div>
+                        <span class="fw-semibold">Ayesha K.</span>
+                        <span class="text-warning ms-1"><i class="fa fa-star"></i> 5.0</span>
+                      </div>
+                    </div>
+                    <p class="small mb-0">"I found my dream apartment in just two days! The process was so easy and the listings were all real."</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="card p-3 shadow-sm">
+                    <div class="d-flex align-items-center mb-2">
+                      <img src="images/siam.jpeg" class="rounded-circle me-2" width="40" height="40" alt="User" />
+                      <div>
+                        <span class="fw-semibold">Rahim U.</span>
+                        <span class="text-warning ms-1"><i class="fa fa-star"></i> 4.8</span>
+                      </div>
+                    </div>
+                    <p class="small mb-0">"Posting my house for rent was super simple. I got great tenants quickly. Highly recommend!"</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="card p-3 shadow-sm">
+                    <div class="d-flex align-items-center mb-2">
+                      <img src="images/siam.jpeg" class="rounded-circle me-2" width="40" height="40" alt="User" />
+                      <div>
+                        <span class="fw-semibold">Shila B.</span>
+                        <span class="text-warning ms-1"><i class="fa fa-star"></i> 4.9</span>
+                      </div>
+                    </div>
+                    <p class="small mb-0">"Great support from the GhorKhojo team!"</p>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Reviews Tab -->
+      <div class="tab-pane fade" id="reviews" role="tabpanel">
+        <div class="row g-4 justify-content-center">
+          <div class="col-12 col-md-8">
+            <div class="card p-4 mb-3 shadow-sm">
+              <div class="d-flex align-items-center mb-2">
+                <img src="images/siam.jpeg" class="rounded-circle me-2" width="48" height="48" alt="User" />
+                <div>
+                  <span class="fw-semibold">Ayesha K.</span>
+                  <span class="text-warning ms-1"><i class="fa fa-star"></i> 5.0</span>
+                </div>
+              </div>
+              <p class="small mb-0">"Just moved into my new apartment thanks to GhorKhojo! Great experience."</p>
+            </div>
+            <div class="card p-4 mb-3 shadow-sm">
+              <div class="d-flex align-items-center mb-2">
+                <img src="images/siam.jpeg" class="rounded-circle me-2" width="48" height="48" alt="User" />
+                <div>
+                  <span class="fw-semibold">Rahim U.</span>
+                  <span class="text-warning ms-1"><i class="fa fa-star"></i> 4.8</span>
+                </div>
+              </div>
+              <p class="small mb-0">"Found great tenants for my house. The platform is super easy to use."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Stories Tab -->
+      <div class="tab-pane fade" id="stories" role="tabpanel">
+        <div class="row g-4 justify-content-center">
+          <div class="col-12 col-md-8">
+            <div class="card p-4 mb-3 shadow-sm">
+              <div class="d-flex align-items-center mb-2">
+                <img src="images/siam.jpeg" class="rounded-circle me-2" width="48" height="48" alt="User" />
+                <div>
+                  <span class="fw-semibold">Shila B.</span>
+                </div>
+              </div>
+              <p class="small mb-0">"I love the community here. Got so many tips from other renters!"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Share Your Experience -->
+    <div class="row justify-content-center mt-5">
+      <div class="col-12 col-md-8">
+        <div class="card p-4 shadow-sm">
+          <h5 class="fw-semibold mb-2">Share Your Experience</h5>
+          <form id="shareExperienceForm">
+            <div class="mb-2">
+              <label class="form-label">Your Review</label>
+              <textarea class="form-control rounded-4 mb-2" rows="3" placeholder="Write a review or share your story..." required></textarea>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Your Rating</label><br />
+              <span class="star-rating">
+                <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="5 stars"><i class="fa fa-star"></i></label>
+                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 stars"><i class="fa fa-star"></i></label>
+                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 stars"><i class="fa fa-star"></i></label>
+                <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 stars"><i class="fa fa-star"></i></label>
+                <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 star"><i class="fa fa-star"></i></label>
+              </span>
+            </div>
+            <button type="submit" class="btn btn-success rounded-pill px-4 fw-semibold">Post</button>
+            <div id="successMsg" class="alert alert-success mt-3 d-none" role="alert">
+              Thank you for sharing your experience!
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+    <!-- Footer -->
+    <footer class="footer-section bg-dark text-white pt-5 pb-3 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-md-3 mb-4">
+            <h6 class="text-uppercase mb-3 fw-semibold opacity-75">For Renters</h6>
+            <ul class="list-unstyled">
+              <li><a href="listings.html" class="footer-link">Find a Home</a></li>
+              <li><a href="listings.html" class="footer-link">Browse Listings</a></li>
+              <li><a href="#" class="footer-link">How it Works</a></li>
+              <li><a href="#" class="footer-link">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-4">
+            <h6 class="text-uppercase mb-3 fw-semibold opacity-75">For Owners</h6>
+            <ul class="list-unstyled">
+              <li><a href="post-rental.html" class="footer-link">Post Rental</a></li>
+              <li><a href="#" class="footer-link">Owner Dashboard</a></li>
+              <li><a href="#" class="footer-link">Support</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-4">
+            <h6 class="text-uppercase mb-3 fw-semibold opacity-75">Resources</h6>
+            <ul class="list-unstyled">
+              <li><a href="#" class="footer-link">Help Center</a></li>
+              <li><a href="#" class="footer-link">Blog</a></li>
+              <li><a href="#" class="footer-link">Guides</a></li>
+              <li><a href="#" class="footer-link">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-4">
+            <h6 class="text-uppercase mb-3 fw-semibold opacity-75">Company</h6>
+            <ul class="list-unstyled">
+              <li><a href="about.html" class="footer-link">About Us</a></li>
+              <li><a href="#" class="footer-link">Careers</a></li>
+              <li><a href="#" class="footer-link">Trust & Safety</a></li>
+              <li><a href="#" class="footer-link">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr class="border-secondary my-3" />
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-2 mb-md-0 pb-3">
+            <span class="small">&copy; 2024 GhorKhojo. All rights reserved.</span>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <a href="#" class="footer-social mx-2"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="footer-social mx-2"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="footer-social mx-2"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="footer-social mx-2"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+    <!-- Bottom Navigation Bar (Mobile) -->
+    <nav class="bottom-nav d-md-none">
+      <a href="index.html" class="bottom-nav-link active"><i class="fa fa-home"></i><span>Home</span></a>
+      <a href="listings.html" class="bottom-nav-link"><i class="fa fa-search"></i><span>Find</span></a>
+      <a href="post-rental.html" class="bottom-nav-link post-btn"><i class="fa fa-plus-circle"></i><span>Post</span></a>
+      <a href="favourites.html" class="bottom-nav-link"><i class="fa fa-heart"></i><span>Favs</span></a>
+      <a href="#" class="bottom-nav-link"><i class="fa fa-user"></i><span>Profile</span></a>
+    </nav>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    // Show success message on form submit (static demo)
+    document.getElementById('shareExperienceForm')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('successMsg').classList.remove('d-none');
+      setTimeout(() => {
+        document.getElementById('successMsg').classList.add('d-none');
+      }, 3000);
+      this.reset();
+    });
+  </script>
+</body>
+</html> 
